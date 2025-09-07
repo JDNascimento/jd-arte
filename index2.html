@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JD | Arte em Miriti</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .descricao {
+      padding: 15px;
+    }
+
+    .descricao h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    .descricao p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎨 JD | Arte em Miriti</h1>
+    <p>Catálogo de peças artesanais</p>
+  </header>
+
+  <section class="catalogo">
+    <div class="item">
+      <img src="img/chav mico.png" alt="Peça 1">
+      <div class="descricao">
+        <h2>Barquinho de Miriti</h2>
+        <p>Peça tradicional feita à mão, representando as embarcações amazônicas.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300" alt="Peça 2">
+      <div class="descricao">
+        <h2>Pássaro de Miriti</h2>
+        <p>Escultura delicada inspirada na fauna amazônica.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300" alt="Peça 3">
+      <div class="descricao">
+        <h2>Brinquedo Tradicional</h2>
+        <p>Colorido e alegre, feito para remeter às brincadeiras de infância.</p>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
