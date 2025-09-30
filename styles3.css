@@ -8,20 +8,22 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fefefe;
-  color: #333;
+  color: #333333;
   line-height: 1.6;
+  
 }
 
 header {
-  background-color: #8B4513;
-  color: white;
+  background-image: linear-gradient(rgb(69, 43, 180), rgb(20, 77, 27));
+  color: rgb(247, 226, 39);
   padding: 20px 0;
   text-align: center;
 }
 
 .logo img {
-  width: 80px;
+  width: 200px;
   height: auto;
+  border-radius: 50%;
 }
 
 .logo h1 {
@@ -39,9 +41,6 @@ header {
   font-size: 1rem;
 }
 
-.navbar {
-  background-color: #A0522D;
-}
 
 .navbar ul {
   list-style: none;
@@ -96,4 +95,75 @@ iframe {
   max-width: 600px;   /* largura máxima para não esticar demais */
   height: auto;       /* ajusta a altura automaticamente */
   aspect-ratio: 16/9; /* mantém proporção de vídeo (opcional) */
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(73, 194, 235, 0.267);
+    border: 0.2rem solid rgb(33, 221, 8);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: rgb(0, 0, 0);
+}
+.social-icons a:hover{
+    color: rgb(33, 221, 8);
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(32, 47, 255);
+    box-shadow: 0 0 25px rgb(32, 47, 255);
+    background-color: rgba(11, 9, 128, 0.959);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #000000;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid rgb(33, 221, 8);
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: rgba(73, 194, 235, 0.267);
+}
+
+.btn:hover{
+    color: rgb(43, 255, 0);
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(32, 47, 255);
+    box-shadow: 0 0 25px rgb(32, 47, 255);
+    background-color: rgba(11, 9, 128, 0.959);
+}
+
+.bot{box-shadow: 0 0 8px rgb(1, 2, 1),
+    0 0 10px rgb(255, 255, 255);
+    border-radius: 50rem;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bot:hover{
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 30px rgb(32, 47, 255);
+}
+
+.bot2{
+    box-shadow: 0 0 8px rgb(1, 2, 1),
+    0 0 10px rgb(255, 255, 255);
+    border-radius: 50rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 0;
+    margin-right: 0;
 }
