@@ -128,3 +128,38 @@ document.addEventListener('DOMContentLoaded', () => {
     chatOutput.innerHTML += `<div style='margin-bottom:1rem;'><b>🤖 JD|Dev:</b> ${simulatedResponse}</div>`;
     chatOutput.scrollTop = chatOutput.scrollHeight;
 });
+
+
+
+  // Cria o contêiner de zoom
+  const zoomOverlay = document.createElement('div');
+  zoomOverlay.classList.add('zoom-overlay');
+  zoomOverlay.innerHTML = `
+    <span class="zoom-close">&times;</span>
+    <img id="zoomed-img" src="" alt="imagem ampliada">
+  `;
+  document.body.appendChild(zoomOverlay);
+
+  const zoomedImg = document.getElementById('zoomed-img');
+  const closeBtn = zoomOverlay.querySelector('.zoom-close');
+
+  // Ao clicar em qualquer imagem da galeria
+  document.querySelectorAll('.scroll-gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImg.src = img.src;
+      zoomOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // trava o scroll da página
+    });
+  });
+
+  // Fecha ao clicar no botão "×" ou fora da imagem
+  closeBtn.addEventListener('click', closeZoom);
+  zoomOverlay.addEventListener('click', e => {
+    if (e.target === zoomOverlay) closeZoom();
+  });
+
+  function closeZoom() {
+    zoomOverlay.style.display = 'none';
+    document.body.style.overflow = ''; // libera o scroll novamente
+  }
+
