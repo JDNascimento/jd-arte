@@ -130,36 +130,81 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-  // Cria o contêiner de zoom
+// === Cria o contêiner do lightbox ===
   const zoomOverlay = document.createElement('div');
   zoomOverlay.classList.add('zoom-overlay');
   zoomOverlay.innerHTML = `
     <span class="zoom-close">&times;</span>
+    <span class="zoom-prev">&#10094;</span>
     <img id="zoomed-img" src="" alt="imagem ampliada">
+    <span class="zoom-next">&#10095;</span>
   `;
   document.body.appendChild(zoomOverlay);
 
   const zoomedImg = document.getElementById('zoomed-img');
   const closeBtn = zoomOverlay.querySelector('.zoom-close');
+  const nextBtn = zoomOverlay.querySelector('.zoom-next');
+  const prevBtn = zoomOverlay.querySelector('.zoom-prev');
 
-  // Ao clicar em qualquer imagem da galeria
-  document.querySelectorAll('.scroll-gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      zoomedImg.src = img.src;
-      zoomOverlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // trava o scroll da página
-    });
+  // === Captura todas as imagens ===
+  const allImages = Array.from(document.querySelectorAll('.scroll-gallery img'));
+  let currentIndex = 0;
+  let zoomLevel = 1;
+
+  // === Abre imagem ===
+  function openZoom(index) {
+    currentIndex = index;
+    zoomedImg.src = allImages[index].src;
+    zoomLevel = 1;
+    zoomedImg.style.transform = 'scale(1)';
+    zoomOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // === Fecha imagem ===
+  function closeZoom() {
+    zoomOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // === Navegação ===
+  function showNext() {
+    currentIndex = (currentIndex + 1) % allImages.length;
+    openZoom(currentIndex);
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    openZoom(currentIndex);
+  }
+
+  // === Eventos ===
+  allImages.forEach((img, i) => {
+    img.addEventListener('click', () => openZoom(i));
   });
 
-  // Fecha ao clicar no botão "×" ou fora da imagem
   closeBtn.addEventListener('click', closeZoom);
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+  // Fecha ao clicar fora da imagem
   zoomOverlay.addEventListener('click', e => {
     if (e.target === zoomOverlay) closeZoom();
   });
 
-  function closeZoom() {
-    zoomOverlay.style.display = 'none';
-    document.body.style.overflow = ''; // libera o scroll novamente
-  }
+  // Zoom com scroll do mouse
+  zoomedImg.addEventListener('wheel', e => {
+    e.preventDefault();
+    if (e.deltaY < 0) zoomLevel += 0.1;
+    else zoomLevel = Math.max(1, zoomLevel - 0.1);
+    zoomedImg.style.transform = `scale(${zoomLevel})`;
+  });
 
+  // Navegação com teclado
+  document.addEventListener('keydown', e => {
+    if (zoomOverlay.style.display === 'flex') {
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'Escape') closeZoom();
+    }
+  });
