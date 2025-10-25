@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JD | Arte em Miriti — O Coração da Fé Amazônica Esculpido à Mão.">
+  <meta name="author" content="Jonathan Diego de Brito Nascimento">
+  <title>🎨 JD | Arte em Miriti</title>
+
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body {background:#f5f5f5; color:#222; line-height:1.6;}
+    header {
+      position:sticky; top:0; z-index:1000;
+      background:#16213e; color:#fff; padding:1rem 2rem; box-shadow:0 2px 10px rgba(0,0,0,0.3);
+      display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    header .logo {display:flex; align-items:center; gap:10px;}
+    header .logo img {width:60px; height:60px; border-radius:50%;}
+    header .logo h1 {font-size:1.4rem;}
+    header .navbar ul {display:flex; flex-wrap:wrap; list-style:none; gap:15px;}
+    header .navbar a {
+      text-decoration:none; color:#fff; font-weight:500;
+      transition:.3s; padding:6px 10px; border-radius:6px;
+    }
+    header .navbar a:hover {background:#1a345c;}
+    
+    main {padding:2rem; max-width:1200px; margin:auto;}
+    section {margin-bottom:4rem;}
+    section h1, section h2, section h3 {color:#16213e; margin:1rem 0;}
+    
+    .scroll-gallery {
+      display:flex; overflow-x:auto; gap:10px; padding:10px 0;
+      scrollbar-width:thin;
+    }
+    .scroll-gallery img {
+      flex:0 0 auto; width:250px; border-radius:10px;
+      cursor:pointer; transition:transform .2s; box-shadow:0 4px 6px rgba(0,0,0,0.2);
+    }
+    .scroll-gallery img:hover {transform:scale(1.05);}
+    
+    iframe {
+      width:100%; max-width:560px; height:315px; border:none;
+      border-radius:10px; display:block; margin:1rem auto;
+    }
+
+    footer {
+      background:#16213e; color:#fff; text-align:center;
+      padding:1.5rem 0; font-size:.9rem;
+    }
+    footer .social-icons a {
+      color:#fff; margin:0 10px; font-size:1.5rem;
+      transition:transform .2s;
+    }
+    footer .social-icons a:hover {transform:scale(1.2); color:#00aaff;}
+    
+    /* Modal para zoom das imagens */
+    .modal {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:2000;
+    }
+    .modal img {max-width:90%; max-height:90%; border-radius:10px;}
+    .modal.active {display:flex;}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://media.giphy.com/media/z4Aa12VrSy68P7TI1g/giphy.gif" alt="Logo JD Arte em Miriti">
+      <div>
+        <h1>🎨 JD | Arte em Miriti</h1>
+        <p style="font-size:0.9rem;">O Coração da Fé Amazônica Esculpido à Mão</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#pirografia">Pirografia</a></li> 
+        <li><a href="#Feiras">Feiras em outubro 2025</a></li>
+        <li><a href="#Clientes">Prestígio dos Clientes</a></li>
+        <li><a href="#casas">Casas de Passarinho</a></li>
+        <li><a href="#Labirinto">Labirinto</a></li>
+        <li><a href="#chaveiros">Chaveiros</a></li>
+        <li><a href="#imas">Imãs de Geladeira</a></li>
+        <li><a href="#pau-de-chuva">Pau de Chuva</a></li>
+        <li><a href="#chocalho">Chocalho</a></li>
+        <li><a href="#lapis-caneta">Lápis e Caneta</a></li>
+        <li><a href="#brincos">Brincos</a></li>
+        <li><a href="#crucifixo">Crucifixo</a></li>
+        <li><a href="#pratos">Pratos</a></li>
+        <li><a href="#xadrez">xadrez</a></li>
+        <li><a href="#barco">Barco</a></li>
+        <li><a href="#jornada">Minha Jornada</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="pirografia">
+      <h1>Pirografia</h1>
+      <div class="scroll-gallery">
+        <img src="img/qua/1.png" alt="Pirografia 1">
+        <img src="img/qua/2.png" alt="Pirografia 2">
+        <img src="img/qua/3.png" alt="Pirografia 3">
+      </div>
+      <iframe src="https://www.youtube.com/embed/LNMarLZ-eT4" allowfullscreen></iframe>
+      <p>
+        A arte da <strong>pirografia</strong> em fibra de miriti combina tradição e inovação. 
+        Essa técnica ancestral — “escrita com fogo” — é usada para gravar detalhes finos que 
+        trazem à vida elementos da cultura amazônica.
+      </p>
+    </section>
+
+    <section id="feiras">
+      <h1>Feiras de Artesanato</h1>
+      <div class="scroll-gallery">
+        <img src="img/fe/1.jpg" alt="Feira de Miriti">
+        <img src="img/fe/2.jpg" alt="Feira FAC">
+      </div>
+      <p>
+        Participações em feiras como a <strong>FAC</strong> e o <strong>Miriti Fest</strong> destacam a
+        força da arte sustentável e a valorização cultural de Abaetetuba e do Pará.
+      </p>
+    </section>
+
+    <section id="clientes">
+      <h1>Prestígio dos Clientes</h1>
+      <div class="scroll-gallery">
+        <img src="img/clt/1.jpg" alt="Cliente 1">
+        <img src="img/clt/2.jpg" alt="Cliente 2">
+      </div>
+      <p>
+        O maior reconhecimento vem do sorriso de quem leva para casa uma peça feita com amor, fé e tradição.
+      </p>
+    </section>
+
+    <section id="labirinto">
+      <h1>Labirinto em Fibra de Miriti</h1>
+      <div class="scroll-gallery">
+        <img src="img/lab/1.png" alt="Labirinto Miriti">
+      </div>
+      <p>
+        Uma peça interativa voltada também a pessoas no espectro autista, estimulando a paciência e a coordenação.
+      </p>
+    </section>
+
+    <section id="jornada">
+      <h1>Minha Jornada</h1>
+      <iframe src="https://www.youtube.com/embed/JfW_PaxrqfQ" allowfullscreen></iframe>
+      <p>
+        Desde o bairro da Terra Firme até o reconhecimento cultural em Abaetetuba, 
+        minha trajetória une fé, arte e tecnologia. 
+        A <strong>JD Arte em Miriti</strong> nasceu do desejo de preservar e inovar a tradição amazônica.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/jonathan-brito-4b57a22b4/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/jd.arteemmiriti/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/5591980706435?text=Olá,%20quero%20falar%20sobre%20seu%20trabalho!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@jd_experiencias_interativas" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>© 2025 JD Arte em Miriti — CNPJ 63.330.529/0001-93<br>Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal Zoom -->
+  <div id="imgModal" class="modal" onclick="this.classList.remove('active')">
+    <img id="modalImg" src="" alt="">
+  </div>
+
+  <script>
+    document.querySelectorAll('.scroll-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
