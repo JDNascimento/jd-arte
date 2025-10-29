@@ -21,10 +21,14 @@ header {
 }
 
 .logo img {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
+  width: 200px;           /* tamanho fixo da largura */
+  height: 200px;          /* altura igual à largura para formar um círculo */
+  object-fit: cover;      /* corta o excesso mantendo o centro da imagem */
+  border-radius: 50%;     /* transforma em círculo perfeito */
+  display: block;         /* evita espaços indesejados */
+  margin: 0 auto;         /* centraliza horizontalmente */
 }
+
 
 .logo h1 {
   margin-top: 10px;
