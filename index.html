@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Portfólio e modelo para projetos">
-    <meta name="author" content="Jonathan Diego de Brito Nascimento">
-    <meta name="keywords" content="desenvolvedor, analista de sistemas, full-stack, front-end, back-end, Python, JavaScript, desenvolvimento web, programador, portfólio, tecnologia, software, aplicações web, banco de dados, API, UI/UX, freelancer">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Portfólio e modelo para projetos">
+  <meta name="author" content="Jonathan Diego de Brito Nascimento">
+  <meta name="keywords"
+    content="desenvolvedor, analista de sistemas, full-stack, front-end, back-end, Python, JavaScript, desenvolvimento web, programador, portfólio, tecnologia, software, aplicações web, banco de dados, API, UI/UX, freelancer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
 
-    <title>🎨JD | Arte em Miriti</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Importa ícones da biblioteca Font Awesome -->
-    <style>
-      header {
-  background-image: linear-gradient(rgb(0, 255, 0), rgb(0, 0, 128), rgb(255, 165, 0));
-  color: rgb(240, 240, 240);
-  padding: 20px 0;
-  text-align: center;
-}
-
-      
-
-
-      .scroll-gallery {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        padding: 10px 0;
-        scrollbar-width: thin;
-      }
-      .scroll-gallery img {
-        flex: 0 0 auto;
-        width: 250px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      }
-      
-       /* Modal para zoom das imagens */
-    .modal {
-      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:2000;
+  <title>🎨JD | Arte em Miriti</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://media.giphy.com/avatars/jonathandiegod4dc5346abb7480bbf7f9bdb58b45947/3jN0frLw8iB9/200h.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Importa ícones da biblioteca Font Awesome -->
+  <style>
+    header {
+      background-image: linear-gradient(rgb(0, 255, 0), rgb(0, 0, 128), rgb(255, 165, 0));
+      color: rgb(240, 240, 240);
+      padding: 20px 0;
+      text-align: center;
     }
-    .modal img {max-width:90%; max-height:90%; border-radius:10px;}
-    .modal.active {display:flex;}
-    </style>
+
+
+
+
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+      scrollbar-width: thin;
+    }
+
+    .scroll-gallery img {
+      flex: 0 0 auto;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Modal para zoom das imagens */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -58,7 +79,7 @@
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="/index.html">Pirografia</a></li> 
+        <li><a href="/index.html">Pirografia</a></li>
         <li><a href="/index copy.html">Feiras em outubro 2025</a></li>
         <li><a href="/index copy 2.html">Prestígio dos Clientes</a></li>
         <li><a href="/index copy 3.html">Casas de Passarinho</a></li>
@@ -75,6 +96,7 @@
         <li><a href="/index copy 13.html">xadrez</a></li>
         <li><a href="/index copy 14.html">Barco</a></li>
         <li><a href="/index copy 15.html">Minha Jornada</a></li>
+        <li><a href="/index copy 17.html">Parceiros</a></li>
       </ul>
     </nav>
   </header>
@@ -85,96 +107,161 @@
     <section id="pirografia">
       <h1>Pirografia</h1>
       <div class="scroll-gallery">
-  <img src="img/eu/0.jpg" alt="eu-0">
-  <img src="img/qua/1.png" alt="qua-1">
-  <img src="img/qua/2.png" alt="qua-2">
-  <img src="img/qua/3.png" alt="qua-3">
-  <img src="img/qua/4.png" alt="qua-4">
-  <img src="img/qua/5.png" alt="qua-5">
-  <img src="img/qua/6.png" alt="qua-6">
-  <img src="img/qua/7.png" alt="qua-7">
-  <img src="img/qua/8.png" alt="qua-8">
-  <img src="img/qua/9.png" alt="qua-9">
-  <img src="img/qua/10.png" alt="qua-10">
-  <img src="img/qua/11.png" alt="qua-11">
-  <img src="img/qua/12.png" alt="qua-12">
-  <img src="img/qua/13.png" alt="qua-13">
-  <img src="img/qua/14.png" alt="qua-14">
-</div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/LNMarLZ-eT4?si=ozi5HSitItfO3R4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img src="img/eu/0.jpg" alt="eu-0">
+        <img src="img/qua/1.png" alt="qua-1">
+        <img src="img/qua/2.png" alt="qua-2">
+        <img src="img/qua/3.png" alt="qua-3">
+        <img src="img/qua/4.png" alt="qua-4">
+        <img src="img/qua/5.png" alt="qua-5">
+        <img src="img/qua/6.png" alt="qua-6">
+        <img src="img/qua/7.png" alt="qua-7">
+        <img src="img/qua/8.png" alt="qua-8">
+        <img src="img/qua/9.png" alt="qua-9">
+        <img src="img/qua/10.png" alt="qua-10">
+        <img src="img/qua/11.png" alt="qua-11">
+        <img src="img/qua/12.png" alt="qua-12">
+        <img src="img/qua/13.png" alt="qua-13">
+        <img src="img/qua/14.png" alt="qua-14">
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LNMarLZ-eT4?si=ozi5HSitItfO3R4o"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-      
-  <h2>Entrevista ao Programa <em><a href="https://www.youtube.com/@panoramacomnaldoaraujo6782" target="_blank" style="text-decoration: none; color: rgb(11, 131, 65);">
-  Panorama
-</a> com o apresentador</em> <a href="https://www.instagram.com/naldo.araujo2/" target="_blank" style="text-decoration: none; color: rgb(11, 131, 65);">
-  Naldo Ajaújo.
-</a></h2>
-  <p>03 de outubro de 2025</p>
 
-  <p>
-    No dia <strong>03 de outubro de 2025</strong>, o programa <strong><em>Panorama</em></strong>, apresentado por 
-    <strong>Naldo Araújo</strong>, destacou o encanto e a tradição dos <strong>brinquedos de miriti</strong>, 
-    símbolo da arte popular de Abaetetuba. Durante a entrevista, o artesão <strong>Jonathan Diego</strong> 
-    apresentou uma novidade que vem despertando a curiosidade do público: os 
-    <strong>tacos de miriti pirografados</strong>, criados a partir da 
-    <strong>fibra de miriti</strong> e transformados em <strong>ímãs de geladeira</strong>.
-  </p>
+      <h2>Entrevista ao Programa <em><a href="https://www.youtube.com/@panoramacomnaldoaraujo6782" target="_blank"
+            style="text-decoration: none; color: rgb(11, 131, 65);">
+            Panorama
+          </a> com o apresentador</em> <a href="https://www.instagram.com/naldo.araujo2/" target="_blank"
+          style="text-decoration: none; color: rgb(11, 131, 65);">
+          Naldo Ajaújo.
+        </a></h2>
+      <p>03 de outubro de 2025</p>
 
-  <p>
-    A inovação combina a leveza e sustentabilidade da fibra de miriti com a delicadeza da 
-    <strong>pirografia</strong>, resultando em peças exclusivas que preservam a essência da tradição artesanal, 
-    ao mesmo tempo em que trazem um toque moderno e funcional para o dia a dia.
-  </p>
-</section>
+      <p>
+        No dia <strong>03 de outubro de 2025</strong>, o programa <strong><em>Panorama</em></strong>, apresentado por
+        <strong>Naldo Araújo</strong>, destacou o encanto e a tradição dos <strong>brinquedos de miriti</strong>,
+        símbolo da arte popular de Abaetetuba. Durante a entrevista, o artesão <strong>Jonathan Diego</strong>
+        apresentou uma novidade que vem despertando a curiosidade do público: os
+        <strong>tacos de miriti pirografados</strong>, criados a partir da
+        <strong>fibra de miriti</strong> e transformados em <strong>ímãs de geladeira</strong>.
+      </p>
 
-<section>
+      <p>
+        A inovação combina a leveza e sustentabilidade da fibra de miriti com a delicadeza da
+        <strong>pirografia</strong>, resultando em peças exclusivas que preservam a essência da tradição artesanal,
+        ao mesmo tempo em que trazem um toque moderno e funcional para o dia a dia.
+      </p>
+    </section>
 
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/pK---RTPe4I?si=gjK60y_UlG46G5u_" allowfullscreen></iframe>
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/58BBO3gz7aY?si=McSdtcsHf0PA3Uw-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/BjpiAtx0qDA?si=qc8JqVmAe_uisYjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section>
 
-    <div id="pirografia"> <p>Pirografia em madeira de miriti, entalhada e queimada com técnica delicada.</p><br> <h1>A Arte Milenar da Pirografia</h1> <p>A técnica da <strong>pirografia</strong> — literalmente “escrita com fogo”, do grego *pur* (fogo) + *graphos* (escrita) — consiste em gravar ou desenhar sobre madeira, couro, cabaça ou outro suporte, usando o calor de um ferro aquecido ou instrumento específico. :contentReference[oaicite:0]{index=0}</p> <h2>Origens e Primeiros Registros</h2> <p>Segundo achados arqueológicos, artesãos da antiguidade utilizavam pontas metálicas aquecidas ou ferramentas rudimentares para marcar superfícies de madeira ou outros materiais. No Egito antigo e em regiões da Europa, foram identificadas tais marcas de queima decorativa. :contentReference[oaicite:1]{index=1} Na China, durante a dinastia Han (~202 a.C. – 220 d.C.), havia uma forma denominada “bordado de agulha de fogo” (“fire needle embroidery”) que se aproxima da pirografia. :contentReference[oaicite:2]{index=2}</p> <h2>Desenvolvimento ao Longo dos Séculos</h2> <p>Na Idade Média e no Renascimento europeu, a pirografia era chamada de “pokerwork” — usando varetas ou ferros aquecidos sobre uma lareira ou pequeno fogão portátil, com diferentes “pontas” para variados efeitos. :contentReference[oaicite:3]{index=3} No século XIX, durante a era vitoriana, com a invenção de aparelhos elétricos ou máquinas para queimado decorativo, a técnica teve nova popularidade como passatempo artístico doméstico. :contentReference[oaicite:4]{index=4}</p> <h2>Materiais, Técnicas e Ferramentas</h2> <p>Para realizar pirografia, o artesão deve considerar: tipo e espécie da madeira (grão, dureza, umidade), ponta (fina, média, larga), temperatura, tempo de contato e pressão. Estas variáveis influenciam a tonalidade (das marcas queimadas) e o sombreamento possível. Além da madeira, couro vegetal, cabaças secas, ossos ou antlers já foram usados. :contentReference[oaicite:5]{index=5} As ferramentas variavam de ferros aquecidos a carvão até canetas elétricas de temperatura variável, tipicamente após o século XX. :contentReference[oaicite:6]{index=6}</p> <h2>Aplicações Artísticas e Comerciais</h2> <p>Hoje, a pirografia é usada para: personalizar tábuas de corte, caixas, instrumentos musicais, painéis decorativos e móveis. A singularidade da marca de queimado dá caráter artesanal valorizado. O acabamento pode incluir tingimento, verniz ou óleo para realçar o contraste. A técnica também se alia ao artesanato de alta qualidade, onde cada desenho é único e exige domínio da ferramenta e do suporte.</p> <h2>Relevância para o Artesanato Contemporâneo</h2> <p>Para você, JD, que está criando portfólio de artesanato e peças únicas, a pirografia oferece um diferencial competitivo: um traço manual, uma “assinatura” de fogo na peça, que valoriza o produto e destaca-se em ambiente de venda online (TikTok, LinkedIn, perfil de artesão). Utilizar madeira local ou sustentável, como miriti ou outra espécie regional, pode agregar valor e história à peça.</p> <p>Fonte: A Brief History of Pyrography – WoodBurnCorner. :contentReference[oaicite:7]{index=7} <br> What is Pyrography? – BurnSavvy. :contentReference[oaicite:8]{index=8} <br> History of Wood-Burning and Pyrography – ThePyrographyTool. :contentReference[oaicite:9]{index=9}</p> </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pK---RTPe4I?si=gjK60y_UlG46G5u_"
+        allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/58BBO3gz7aY?si=McSdtcsHf0PA3Uw-"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/BjpiAtx0qDA?si=qc8JqVmAe_uisYjM"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    
-</section>
+      <div id="pirografia">
+        <p>Pirografia em madeira de miriti, entalhada e queimada com técnica delicada.</p><br>
+        <h1>A Arte Milenar da Pirografia</h1>
+        <p>A técnica da <strong>pirografia</strong> — literalmente “escrita com fogo”, do grego *pur* (fogo) + *graphos*
+          (escrita) — consiste em gravar ou desenhar sobre madeira, couro, cabaça ou outro suporte, usando o calor de um
+          ferro aquecido ou instrumento específico. :contentReference[oaicite:0]{index=0}</p>
+        <h2>Origens e Primeiros Registros</h2>
+        <p>Segundo achados arqueológicos, artesãos da antiguidade utilizavam pontas metálicas aquecidas ou ferramentas
+          rudimentares para marcar superfícies de madeira ou outros materiais. No Egito antigo e em regiões da Europa,
+          foram identificadas tais marcas de queima decorativa. :contentReference[oaicite:1]{index=1} Na China, durante
+          a dinastia Han (~202 a.C. – 220 d.C.), havia uma forma denominada “bordado de agulha de fogo” (“fire needle
+          embroidery”) que se aproxima da pirografia. :contentReference[oaicite:2]{index=2}</p>
+        <h2>Desenvolvimento ao Longo dos Séculos</h2>
+        <p>Na Idade Média e no Renascimento europeu, a pirografia era chamada de “pokerwork” — usando varetas ou ferros
+          aquecidos sobre uma lareira ou pequeno fogão portátil, com diferentes “pontas” para variados efeitos.
+          :contentReference[oaicite:3]{index=3} No século XIX, durante a era vitoriana, com a invenção de aparelhos
+          elétricos ou máquinas para queimado decorativo, a técnica teve nova popularidade como passatempo artístico
+          doméstico. :contentReference[oaicite:4]{index=4}</p>
+        <h2>Materiais, Técnicas e Ferramentas</h2>
+        <p>Para realizar pirografia, o artesão deve considerar: tipo e espécie da madeira (grão, dureza, umidade), ponta
+          (fina, média, larga), temperatura, tempo de contato e pressão. Estas variáveis influenciam a tonalidade (das
+          marcas queimadas) e o sombreamento possível. Além da madeira, couro vegetal, cabaças secas, ossos ou antlers
+          já foram usados. :contentReference[oaicite:5]{index=5} As ferramentas variavam de ferros aquecidos a carvão
+          até canetas elétricas de temperatura variável, tipicamente após o século XX.
+          :contentReference[oaicite:6]{index=6}</p>
+        <h2>Aplicações Artísticas e Comerciais</h2>
+        <p>Hoje, a pirografia é usada para: personalizar tábuas de corte, caixas, instrumentos musicais, painéis
+          decorativos e móveis. A singularidade da marca de queimado dá caráter artesanal valorizado. O acabamento pode
+          incluir tingimento, verniz ou óleo para realçar o contraste. A técnica também se alia ao artesanato de alta
+          qualidade, onde cada desenho é único e exige domínio da ferramenta e do suporte.</p>
+        <h2>Relevância para o Artesanato Contemporâneo</h2>
+        <p>Para você, JD, que está criando portfólio de artesanato e peças únicas, a pirografia oferece um diferencial
+          competitivo: um traço manual, uma “assinatura” de fogo na peça, que valoriza o produto e destaca-se em
+          ambiente de venda online (TikTok, LinkedIn, perfil de artesão). Utilizar madeira local ou sustentável, como
+          miriti ou outra espécie regional, pode agregar valor e história à peça.</p>
+        <p>Fonte: A Brief History of Pyrography – WoodBurnCorner. :contentReference[oaicite:7]{index=7} <br> What is
+          Pyrography? – BurnSavvy. :contentReference[oaicite:8]{index=8} <br> History of Wood-Burning and Pyrography –
+          ThePyrographyTool. :contentReference[oaicite:9]{index=9}</p>
+      </div>
 
-    
+
+    </section>
+
+
   </main>
 
 
 
   <footer>
-      <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61582512077719" target="_blank"><i class="fa-brands fa-facebook"></i></a><!--EM <i class="fa-brands fa-ICONE DE REDE SOCIAL"></i> QUE PODE SER LIGADA POR <a href= -->
-                <a href="https://www.instagram.com/jdarteemmiriti/" target="_blank"><i class="fa-brands fa-instagram"></i></a><!-- USE target="_blank" APÓS O LINK PARA ABRIR EM OUTRA PÁGINA-->
-                <a href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.youtube.com/@jd_experiencias_interativas"target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61582512077719" target="_blank"><i
+          class="fa-brands fa-facebook"></i></a><!--EM <i class="fa-brands fa-ICONE DE REDE SOCIAL"></i> QUE PODE SER LIGADA POR <a href= -->
+      <a href="https://www.instagram.com/jdarteemmiriti/" target="_blank"><i
+          class="fa-brands fa-instagram"></i></a><!-- USE target="_blank" APÓS O LINK PARA ABRIR EM OUTRA PÁGINA-->
+      <a href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"
+        target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@jd_experiencias_interativas" target="_blank"><i
+          class="fa-brands fa-youtube"></i></a>
+    </div>
+    </div>
     <p>&copy; JD Arte em Miriti © 2025 <br> CNPJ: 63.330.529/0001-93 <br> Todos os direitos reservados.</p>
   </footer>
 
-    
-                <!-- Ícone Flutuante para abrir o chat -->
-<div id="chat-launcher" style="position:fixed; bottom:20px; right:20px; background:#16213e; color:#fff; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center;  cursor:pointer; z-index:9998;" onclick="toggleChat(true)">
-  <img class="bot" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3k3Y3I3ZzVuNHExZW9xNXU1MnZoM2Jnb2gzcHpwOWwyMGV4MW5uYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E8lwC7e8gMXp4YK8xv/giphy.gif" alt="Quill">
-</div>
 
-<!-- Painel Oculto do JD|Dev Chatbot -->
-<div id="jddev-chat-panel" style="position:fixed; right:0; top:0; height:90vh; width:350px; border-radius: 0 0 5% 5%; background:#1a1a2eea; color:#fff; box-shadow:-2px 0 10px rgba(0, 0, 0, 0.774);  z-index:9999; display:none; flex-direction:column;">
-  <div style="background:#16213e25; padding:1rem; display:flex; align-items:center; justify-content:space-between;">
-    <img class="bot2" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTB4Y2NtNXlmYWJ4NDcyN21qa3ltZmZuMmRhanhwZmk5aHhvZXZtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u91sUMwxrefoF4TQUI/giphy.gif" alt="Quill"><h2 style="margin:0 0; font-size:2rem;">JD</h2>
-    <button onclick="toggleChat(false)" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✖</button>
+  <!-- Ícone Flutuante para abrir o chat -->
+  <div id="chat-launcher"
+    style="position:fixed; bottom:20px; right:20px; background:#16213e; color:#fff; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center;  cursor:pointer; z-index:9998;"
+    onclick="toggleChat(true)">
+    <img class="bot"
+      src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3k3Y3I3ZzVuNHExZW9xNXU1MnZoM2Jnb2gzcHpwOWwyMGV4MW5uYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E8lwC7e8gMXp4YK8xv/giphy.gif"
+      alt="Quill">
   </div>
 
-  <div id="chat-output" style="flex:1; padding:1rem; overflow-y:auto; font-size:1.5rem;"></div>
+  <!-- Painel Oculto do JD|Dev Chatbot -->
+  <div id="jddev-chat-panel"
+    style="position:fixed; right:0; top:0; height:90vh; width:350px; border-radius: 0 0 5% 5%; background:#1a1a2eea; color:#fff; box-shadow:-2px 0 10px rgba(0, 0, 0, 0.774);  z-index:9999; display:none; flex-direction:column;">
+    <div style="background:#16213e25; padding:1rem; display:flex; align-items:center; justify-content:space-between;">
+      <img class="bot2"
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTB4Y2NtNXlmYWJ4NDcyN21qa3ltZmZuMmRhanhwZmk5aHhvZXZtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u91sUMwxrefoF4TQUI/giphy.gif"
+        alt="Quill">
+      <h2 style="margin:0 0; font-size:2rem;">JD</h2>
+      <button onclick="toggleChat(false)"
+        style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✖</button>
+    </div>
 
-  <div style="padding:1rem; border-top:1px solid #333;">
-    <input id="chat-input" type="text" placeholder="Digite sua pergunta..." style="width:100%; font-family: Arial, sans-serif; text-transform: none; padding:0.5rem; border:none; border-radius:5px;" onkeydown="if(event.key==='Enter'){sendToDialogflow()}" />
+    <div id="chat-output" style="flex:1; padding:1rem; overflow-y:auto; font-size:1.5rem;"></div>
+
+    <div style="padding:1rem; border-top:1px solid #333;">
+      <input id="chat-input" type="text" placeholder="Digite sua pergunta..."
+        style="width:100%; font-family: Arial, sans-serif; text-transform: none; padding:0.5rem; border:none; border-radius:5px;"
+        onkeydown="if(event.key==='Enter'){sendToDialogflow()}" />
+    </div>
   </div>
-</div>
 
- <!-- Modal Zoom -->
+  <!-- Modal Zoom -->
   <div id="imgModal" class="modal" onclick="this.classList.remove('active')">
     <img id="modalImg" src="" alt="">
   </div>
@@ -192,4 +279,5 @@
 
 
 </body>
+
 </html>
