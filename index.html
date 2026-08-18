@@ -1,384 +1,1928 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Portfólio e modelo para projetos">
-  <meta name="author" content="Jonathan Diego de Brito Nascimento">
-  <meta name="keywords"
-    content="desenvolvedor, analista de sistemas, full-stack, front-end, back-end, Python, JavaScript, desenvolvimento web, programador, portfólio, tecnologia, software, aplicações web, banco de dados, API, UI/UX, freelancer">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="index, follow">
-  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
 
-  <title>🎨JD | Arte em Miriti</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="description"
+    content="JD | Arte em Miriti — Pirografia artesanal na fibra de miriti e madeira. Arte amazônica, tradição, criatividade e inovação em peças exclusivas.">
+
+  <meta name="author" content="Jonathan Diego de Brito Nascimento">
+
+  <meta name="keywords"
+    content="JD Arte em Miriti, pirografia, miriti, fibra de miriti, artesanato amazônico, Abaetetuba, arte amazônica, pirografia em madeira, brinquedos de miriti, artesanato paraense, peças personalizadas">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#16213e">
+
+  <meta name="apple-mobile-web-app-title" content="JD | Arte em Miriti">
+
+  <title>🎨 JD | Arte em Miriti — Pirografia</title>
+
+  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- FAVICON -->
   <link rel="icon"
-    href="https://media.giphy.com/avatars/jonathandiegod4dc5346abb7480bbf7f9bdb58b45947/3jN0frLw8iB9/200h.png" />
+    href="https://media.giphy.com/avatars/jonathandiegod4dc5346abb7480bbf7f9bdb58b45947/3jN0frLw8iB9/200h.png">
+
+  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Importa ícones da biblioteca Font Awesome -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <style>
-    header {
-      background-image: linear-gradient(rgb(0, 255, 0), rgb(0, 0, 128), rgb(255, 165, 0));
-      color: rgb(240, 240, 240);
-      padding: 20px 0;
-      text-align: center;
+
+    /* =====================================================
+       VARIÁVEIS
+    ===================================================== */
+
+    :root {
+      --verde: #0b8341;
+      --verde-escuro: #075b2d;
+      --azul: #16213e;
+      --azul-escuro: #0b1020;
+      --laranja: #f5a623;
+      --dourado: #d89b2b;
+      --branco: #ffffff;
+      --cinza: #f4f6f8;
+      --texto: #252525;
+      --texto-claro: #666;
+      --borda: rgba(0, 0, 0, 0.08);
+      --sombra: 0 12px 35px rgba(0, 0, 0, 0.12);
+      --raio: 18px;
+      --transicao: 0.3s ease;
     }
 
 
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(
+          180deg,
+          #f8faf9 0%,
+          #ffffff 45%,
+          #f4f6f8 100%
+        );
+      color: var(--texto);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      position: relative;
+      background:
+        linear-gradient(
+          135deg,
+          #00a63c 0%,
+          #08733c 28%,
+          #16213e 58%,
+          #f5a623 100%
+        );
+
+      color: var(--branco);
+      padding: 35px 20px 20px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      top: -180px;
+      right: -100px;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      bottom: -160px;
+      left: -80px;
+    }
+
+    .logo {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .slogan {
+      margin-top: 4px;
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      opacity: 0.95;
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+      position: relative;
+      z-index: 10;
+      margin-top: 25px;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      display: block;
+      padding: 9px 13px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: var(--transicao);
+      backdrop-filter: blur(5px);
+    }
+
+    .navbar a:hover,
+    .navbar a:focus {
+      background: #fff;
+      color: var(--verde-escuro);
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    main {
+      width: min(1200px, 92%);
+      margin: 45px auto;
+    }
+
+    #pirografia {
+      width: 100%;
+    }
+
+
+    /* =====================================================
+       HERO DA PÁGINA
+    ===================================================== */
+
+    .hero-pirografia {
+      position: relative;
+      padding: 55px 35px;
+      margin-bottom: 45px;
+      text-align: center;
+      border-radius: 25px;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(7, 91, 45, 0.96),
+          rgba(22, 33, 62, 0.96)
+        );
+      box-shadow: var(--sombra);
+    }
+
+    .hero-pirografia::before {
+      content: "🔥";
+      position: absolute;
+      font-size: 12rem;
+      opacity: 0.04;
+      right: -30px;
+      bottom: -60px;
+    }
+
+    .hero-pirografia h1 {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero-pirografia p {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: auto;
+      font-size: 1.08rem;
+      opacity: 0.94;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 7px 15px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+
+    /* =====================================================
+       SEÇÕES
+    ===================================================== */
+
+    .content-section {
+      background: #fff;
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: var(--raio);
+      box-shadow: var(--sombra);
+      border: 1px solid var(--borda);
+    }
+
+    .content-section h2 {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 16px;
+      color: var(--azul);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .content-section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 70%;
+      border-radius: 10px;
+      background: linear-gradient(
+        180deg,
+        var(--verde),
+        var(--laranja)
+      );
+    }
+
+    .content-section p {
+      margin-bottom: 16px;
+      color: var(--texto-claro);
+      font-size: 1rem;
+    }
+
+    .content-section strong {
+      color: var(--verde-escuro);
+    }
+
+
+    /* =====================================================
+       DESTAQUES
+    ===================================================== */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 25px 0 10px;
+    }
+
+    .feature-card {
+      padding: 25px 20px;
+      border-radius: 16px;
+      background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f4f7f5
+      );
+      border: 1px solid var(--borda);
+      text-align: center;
+      transition: var(--transicao);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: var(--verde);
+      margin-bottom: 12px;
+    }
+
+    .feature-card h3 {
+      color: var(--azul);
+      margin-bottom: 7px;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       GALERIA
+    ===================================================== */
+
+    .gallery-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin: 30px 0 10px;
+    }
+
+    .gallery-title h3 {
+      color: var(--verde-escuro);
+      font-size: 1.15rem;
+    }
+
+    .gallery-title span {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
     .scroll-gallery {
       display: flex;
+      gap: 15px;
       overflow-x: auto;
-      gap: 10px;
-      padding: 10px 0;
+      padding: 15px 4px 20px;
+      scroll-snap-type: x mandatory;
       scrollbar-width: thin;
+      scrollbar-color: var(--verde) transparent;
+    }
+
+    .scroll-gallery::-webkit-scrollbar {
+      height: 7px;
+    }
+
+    .scroll-gallery::-webkit-scrollbar-track {
+      background: #eee;
+      border-radius: 20px;
+    }
+
+    .scroll-gallery::-webkit-scrollbar-thumb {
+      background: var(--verde);
+      border-radius: 20px;
     }
 
     .scroll-gallery img {
       flex: 0 0 auto;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      width: 280px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      cursor: zoom-in;
+      scroll-snap-align: start;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.16);
+      transition: var(--transicao);
+      border: 3px solid #fff;
     }
 
-    /* Modal para zoom das imagens */
+    .scroll-gallery img:hover {
+      transform: scale(1.025);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    }
+
+
+    /* =====================================================
+       PROCESSO
+    ===================================================== */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 25px;
+      border-radius: 17px;
+      background: #f7f9f8;
+      border-left: 4px solid var(--verde);
+    }
+
+    .process-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: var(--verde);
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .process-card h3 {
+      margin-bottom: 8px;
+      color: var(--azul);
+    }
+
+    .process-card p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       ENTREVISTA
+    ===================================================== */
+
+    .interview-section {
+      background:
+        linear-gradient(
+          135deg,
+          #f0f7f3,
+          #ffffff
+        );
+    }
+
+    .interview-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .interview-title h2 {
+      padding-left: 0;
+    }
+
+    .interview-title h2::before {
+      display: none;
+    }
+
+    .interview-title a {
+      color: var(--verde);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .interview-title a:hover {
+      text-decoration: underline;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto 20px;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      border: 0;
+    }
+
+    .date {
+      text-align: center;
+      color: var(--verde);
+      font-weight: bold;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta-pirografia {
+      position: relative;
+      overflow: hidden;
+      margin-top: 35px;
+      padding: 45px 30px;
+      text-align: center;
+      border-radius: 22px;
+      color: #fff;
+      background:
+        linear-gradient(
+          135deg,
+          #075b2d,
+          #16213e
+        );
+      box-shadow: var(--sombra);
+    }
+
+    .cta-pirografia::after {
+      content: "🎨";
+      position: absolute;
+      right: 20px;
+      bottom: -35px;
+      font-size: 8rem;
+      opacity: 0.07;
+    }
+
+    .cta-pirografia h2 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .cta-pirografia h2::before {
+      display: none;
+    }
+
+    .cta-pirografia p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-orcamento {
+      position: relative;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: var(--transicao);
+    }
+
+    .btn-orcamento::before {
+      content: "\f232";
+      font-family: "Font Awesome 6 Brands";
+    }
+
+    .btn-orcamento:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(
+          135deg,
+          #0b1020,
+          #16213e
+        );
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-decoration: none;
+      font-size: 1.25rem;
+      transition: var(--transicao);
+    }
+
+    .social-icons a:hover {
+      background: var(--verde);
+      transform: translateY(-4px);
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       CHATBOT
+    ===================================================== */
+
+    #chat-launcher {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      background: #16213e;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9998;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      transition: var(--transicao);
+    }
+
+    #chat-launcher:hover {
+      transform: scale(1.08);
+    }
+
+    #chat-launcher .bot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    #jddev-chat-panel {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      top: auto;
+      height: min(700px, 88vh);
+      width: min(390px, calc(100vw - 30px));
+      border-radius: 20px;
+      background: rgba(26, 26, 46, 0.97);
+      color: #fff;
+      box-shadow: -5px 10px 35px rgba(0, 0, 0, 0.4);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    #jddev-chat-panel > div:first-child {
+      background: rgba(22, 33, 62, 0.95) !important;
+    }
+
+    #chat-output {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      font-size: 1rem !important;
+    }
+
+    #chat-input {
+      font-size: 16px;
+      outline: none;
+    }
+
+
+    /* =====================================================
+       MODAL
+    ===================================================== */
+
     .modal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.93);
       align-items: center;
       justify-content: center;
-      z-index: 2000;
-    }
-
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
+      z-index: 20000;
+      padding: 25px;
+      cursor: zoom-out;
+      backdrop-filter: blur(5px);
     }
 
     .modal.active {
       display: flex;
+      animation: modalEntrada 0.25s ease;
     }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      cursor: default;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @keyframes modalEntrada {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+    /* =====================================================
+       ANIMAÇÃO DE ENTRADA
+    ===================================================== */
+
+    .reveal {
+      animation: aparecer 0.7s ease both;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    /* =====================================================
+       RESPONSIVIDADE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .feature-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar ul {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 5px 0 10px;
+      }
+
+      .navbar ul::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .navbar a {
+        white-space: nowrap;
+      }
+
+      .content-section {
+        padding: 25px;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 25px 12px 15px;
+      }
+
+      .logo img {
+        width: 85px;
+        height: 85px;
+      }
+
+      main {
+        width: 94%;
+        margin: 25px auto;
+      }
+
+      .hero-pirografia {
+        padding: 35px 20px;
+        border-radius: 18px;
+      }
+
+      .content-section {
+        padding: 22px 17px;
+        border-radius: 15px;
+      }
+
+      .content-section p {
+        font-size: 0.95rem;
+      }
+
+      .scroll-gallery img {
+        width: 245px;
+        height: 190px;
+      }
+
+      .gallery-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .cta-pirografia {
+        padding: 35px 18px;
+      }
+
+      #chat-launcher {
+        width: 60px;
+        height: 60px;
+        right: 15px;
+        bottom: 15px;
+      }
+
+      #jddev-chat-panel {
+        right: 10px;
+        bottom: 10px;
+        width: calc(100vw - 20px);
+        height: calc(100vh - 20px);
+        max-height: 750px;
+        border-radius: 18px;
+      }
+
+      .modal {
+        padding: 10px;
+      }
+
+      .modal img {
+        max-width: 100%;
+        max-height: 85vh;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
   <header>
+
     <div class="logo">
+
       <img
         src="img/logo.png"
-        alt="Logo Artesanato">
-      <h1>🎨JD | Arte em Miriti</h1>
-      <p class="slogan">O Coração da Fé Amazônica Esculpido à Mão.</p>
+        alt="Logo JD Arte em Miriti"
+        loading="eager">
+
+      <h1>🎨 JD | Arte em Miriti</h1>
+
+      <p class="slogan">
+        O Coração da Fé Amazônica Esculpido à Mão.
+      </p>
+
     </div>
-    <nav class="navbar">
+
+
+    <!-- ===================================================
+         MENU
+    =================================================== -->
+
+    <nav class="navbar" aria-label="Menu principal">
+
       <ul>
-        <li><a href="/index.html">Pirografia</a></li>
-        <li><a href="/index copy.html">Feiras e ações</a></li>
-        <li><a href="/index copy 2.html">Prestígio dos Clientes</a></li>
-        <li><a href="/index copy 3.html">Casas de Passarinho</a></li>
-        <li><a href="/index copy 16.html">Kit de Pintura</a></li>
-        <li><a href="/index copy 4.html">Labirinto</a></li>
-        <li><a href="/index copy 5.html">Chaveiros</a></li>
-        <li><a href="/index copy 6.html">Imãs de Geladeira</a></li>
-        <li><a href="/index copy 7.html">Pau de Chuva</a></li>
-        <li><a href="/index copy 8.html">Chocalho</a></li>
-        <li><a href="/index copy 9.html">Lápis e Caneta</a></li>
-        <li><a href="/index copy 10.html">Brincos</a></li>
-        <li><a href="/index copy 11.html">Crucifixo</a></li>
-        <li><a href="/index copy 12.html">Pratos</a></li>
-        <li><a href="/index copy 13.html">xadrez</a></li>
-        <li><a href="/index copy 14.html">Barco</a></li>
-        <li><a href="/index copy 15.html">Minha Jornada</a></li>
-        <li><a href="/index copy 17.html">Parceiros</a></li>
+
+        <li>
+          <a href="/index.html">Pirografia</a>
+        </li>
+
+        <li>
+          <a href="/index copy.html">Feiras e ações</a>
+        </li>
+
+        <li>
+          <a href="/index copy 2.html">Prestígio dos Clientes</a>
+        </li>
+
+        <li>
+          <a href="/index copy 3.html">Casas de Passarinho</a>
+        </li>
+
+        <li>
+          <a href="/index copy 16.html">Kit de Pintura</a>
+        </li>
+
+        <li>
+          <a href="/index copy 4.html">Labirinto</a>
+        </li>
+
+        <li>
+          <a href="/index copy 5.html">Chaveiros</a>
+        </li>
+
+        <li>
+          <a href="/index copy 6.html">Imãs de Geladeira</a>
+        </li>
+
+        <li>
+          <a href="/index copy 7.html">Pau de Chuva</a>
+        </li>
+
+        <li>
+          <a href="/index copy 8.html">Chocalho</a>
+        </li>
+
+        <li>
+          <a href="/index copy 9.html">Lápis e Caneta</a>
+        </li>
+
+        <li>
+          <a href="/index copy 10.html">Brincos</a>
+        </li>
+
+        <li>
+          <a href="/index copy 11.html">Crucifixo</a>
+        </li>
+
+        <li>
+          <a href="/index copy 12.html">Pratos</a>
+        </li>
+
+        <li>
+          <a href="/index copy 13.html">xadrez</a>
+        </li>
+
+        <li>
+          <a href="/index copy 14.html">Barco</a>
+        </li>
+
+        <li>
+          <a href="/index copy 15.html">Minha Jornada</a>
+        </li>
+
+        <li>
+          <a href="/index copy 17.html">Parceiros</a>
+        </li>
+
       </ul>
+
     </nav>
+
   </header>
+
+
+  <!-- =====================================================
+       SCRIPT PRINCIPAL EXISTENTE
+  ===================================================== -->
 
   <script src="script.js"></script>
 
+
+  <!-- =====================================================
+       CONTEÚDO
+  ===================================================== -->
+
   <main>
+
     <section id="pirografia">
-      <div id="pirografia">
 
-  <h1>Pirografia na Fibra de Miriti e na Madeira</h1>
 
-  <p>
-    A <strong>pirografia</strong> é a arte de criar desenhos, detalhes,
-    texturas e imagens utilizando o calor de uma ferramenta sobre
-    diferentes superfícies. Na <strong>JD | Arte em Miriti</strong>,
-    essa técnica é utilizada para transformar a fibra de miriti e a
-    madeira em peças artesanais exclusivas, unindo tradição, criatividade
-    e inovação.
-  </p>
+      <!-- =================================================
+           HERO
+      ================================================= -->
 
-  <!-- PIROGRAFIA NA FIBRA DE MIRITI -->
-  <h2>Pirografia na Fibra de Miriti</h2>
+      <div class="hero-pirografia reveal">
 
-  <p>
-    A fibra de miriti faz parte da identidade cultural de Abaetetuba,
-    reconhecida pela tradição na produção dos brinquedos de miriti.
-    Na JD | Arte em Miriti, essa matéria-prima ganha novas possibilidades
-    através da pirografia.
-  </p>
+        <span class="badge">
+          🔥 Arte artesanal amazônica
+        </span>
 
-  <p>
-    A técnica permite criar desenhos, linhas, texturas, sombras e
-    detalhes diretamente sobre a fibra, valorizando cada peça e
-    preservando sua característica artesanal.
-  </p>
+        <h1>
+          Pirografia na Fibra de Miriti e na Madeira
+        </h1>
 
-  <p>
-    Produzimos trabalhos personalizados em miriti, incluindo
-    <strong>miniaturas, embarcações, placas, peças decorativas,
-    lembranças, troféus e projetos especiais</strong>.
-  </p>
+        <p>
+          Onde o calor transforma matéria-prima em arte,
+          identidade e histórias que permanecem.
+        </p>
 
-  <!-- ESPAÇO PARA GALERIA - MIRITI -->
-  <div class="scroll-gallery">
-        <img src="img/eu/0.jpg" alt="eu-0">
-        <img src="img/qua/p1.png" alt="qua-p1">
-        <img src="img/qua/p2.png" alt="qua-p2">
-        <img src="img/qua/p3.png" alt="qua-p3">
-        <img src="img/qua/p4.png" alt="qua-p4">
-        <img src="img/qua/p5.png" alt="qua-p5">
-        <img src="img/qua/p6.png" alt="qua-p6">
-        <img src="img/qua/p7.png" alt="qua-p7">
-        <img src="img/qua/p8.png" alt="qua-p8">
-        <img src="img/qua/p9.png" alt="qua-p9">
-        <img src="img/qua/p10.png" alt="qua-p10">
-        <img src="img/qua/p11.png" alt="qua-p11">
-        <img src="img/qua/p12.png" alt="qua-p12">
-        <img src="img/qua/p13.png" alt="qua-p13">
-        <img src="img/qua/1.png" alt="qua-1">
-        <img src="img/qua/2.png" alt="qua-2">
-        <img src="img/qua/3.png" alt="qua-3">
-        <img src="img/qua/4.png" alt="qua-4">
-        <img src="img/qua/5.png" alt="qua-5">
-        <img src="img/qua/6.png" alt="qua-6">
-        <img src="img/qua/7.png" alt="qua-7">
-        <img src="img/qua/8.png" alt="qua-8">
-        <img src="img/qua/9.png" alt="qua-9">
-        <img src="img/qua/10.png" alt="qua-10">
-        <img src="img/qua/11.png" alt="qua-11">
-        <img src="img/qua/12.png" alt="qua-12">
-        <img src="img/qua/13.png" alt="qua-13">
-        <img src="img/qua/14.png" alt="qua-14">
       </div>
 
 
-  <!-- PIROGRAFIA NA MADEIRA -->
-  <h2>Pirografia na Madeira</h2>
+      <!-- =================================================
+           INTRODUÇÃO
+      ================================================= -->
 
-  <p>
-    A madeira oferece diferentes possibilidades para a criação de
-    trabalhos pirografados. Cada espécie possui características próprias,
-    como textura, dureza e tonalidade, proporcionando resultados
-    diferentes em cada projeto.
-  </p>
+      <div class="content-section reveal">
 
-  <p>
-    Na <strong>JD | Arte em Miriti</strong>, utilizamos a pirografia
-    em peças como <strong>remos, tábuas decorativas, placas, painéis,
-    troféus e peças personalizadas</strong>.
-  </p>
+        <p>
+          A <strong>pirografia</strong> é a arte de criar desenhos,
+          detalhes, texturas e imagens utilizando o calor de uma
+          ferramenta sobre diferentes superfícies.
+        </p>
 
-  <p>
-    A combinação entre precisão, temperatura, pressão e movimento da
-    ferramenta permite criar desde traços delicados até trabalhos
-    com maior profundidade, contraste e realismo.
-  </p>
+        <p>
+          Na <strong>JD | Arte em Miriti</strong>, essa técnica é
+          utilizada para transformar a fibra de miriti e a madeira
+          em peças artesanais exclusivas, unindo
+          <strong>tradição, criatividade e inovação</strong>.
+        </p>
 
-  <!-- ESPAÇO PARA GALERIA - MADEIRA -->
-      <div class="scroll-gallery">
-        <img src="img/pm/1.png" alt="pm-1">
-        <img src="img/pm/2.png" alt="pm-2">
-        <img src="img/pm/3.png" alt="pm-3">
-        <img src="img/pm/4.png" alt="pm-4">
-        <img src="img/pm/5.png" alt="pm-5">
-        <img src="img/pm/6.png" alt="pm-6">
-        <img src="img/pm/7.png" alt="pm-7">
-        <img src="img/pm/8.png" alt="pm-8">
-        <img src="img/pm/9.png" alt="pm-9">
-        <img src="img/pm/10.png" alt="pm-10">
-        <img src="img/pm/11.png" alt="pm-11">
-        <img src="img/pm/12.png" alt="pm-12">
-        <img src="img/pm/13.png" alt="pm-13">
-        <img src="img/pm/14.png" alt="pm-14">
-        <img src="img/pm/15.png" alt="pm-15">
-        <img src="img/pm/16.png" alt="pm-16">
-        <img src="img/pm/17.png" alt="pm-17">
+
+        <div class="feature-grid">
+
+          <div class="feature-card">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>Pirografia</h3>
+
+            <p>
+              Traços e detalhes produzidos através do calor.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <h3>Miriti</h3>
+
+            <p>
+              Matéria-prima ligada à identidade cultural amazônica.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h3>Exclusividade</h3>
+
+            <p>
+              Cada peça recebe identidade própria e acabamento artesanal.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
 
-  <!-- NOSSO PROCESSO -->
-  <h2>Nosso Processo</h2>
+      <!-- =================================================
+           PIROGRAFIA NO MIRITI
+      ================================================= -->
 
-  <p>
-    Cada trabalho começa com a escolha e preparação adequada do suporte.
-    O desenho é planejado e aplicado cuidadosamente antes da etapa de
-    queima.
-  </p>
+      <div class="content-section reveal">
 
-  <p>
-    Durante a pirografia, controlamos a intensidade do calor, a pressão
-    e a velocidade dos movimentos para criar diferentes tonalidades,
-    linhas, sombras e efeitos.
-  </p>
+        <h2>
+          Pirografia na Fibra de Miriti
+        </h2>
 
-  <p>
-    Após a conclusão da arte, a peça pode receber acabamento adequado
-    ao projeto, contribuindo para sua proteção, durabilidade e valorização
-    estética.
-  </p>
+        <p>
+          A fibra de miriti faz parte da identidade cultural de
+          Abaetetuba, reconhecida pela tradição na produção dos
+          brinquedos de miriti.
+        </p>
+
+        <p>
+          Na <strong>JD | Arte em Miriti</strong>, essa matéria-prima
+          ganha novas possibilidades através da pirografia.
+        </p>
+
+        <p>
+          A técnica permite criar desenhos, linhas, texturas,
+          sombras e detalhes diretamente sobre a fibra, valorizando
+          cada peça e preservando sua característica artesanal.
+        </p>
+
+        <p>
+          Produzimos trabalhos personalizados em miriti, incluindo
+          <strong>
+            miniaturas, embarcações, placas, peças decorativas,
+            lembranças, troféus e projetos especiais
+          </strong>.
+        </p>
 
 
-  <!-- ARTE EXCLUSIVA -->
-  <h2>Uma Arte Feita à Mão</h2>
+        <div class="gallery-title">
 
-  <p>
-    Cada traço é realizado individualmente pelo artesão. Por isso,
-    cada trabalho possui características próprias e carrega a
-    identidade de quem o produziu.
-  </p>
+          <h3>
+            <i class="fa-solid fa-images"></i>
+            Galeria — Trabalhos em Miriti
+          </h3>
 
-  <p>
-    Na <strong>JD | Arte em Miriti</strong>, buscamos transformar
-    materiais tradicionais em peças que unem
-    <strong>cultura amazônica, arte, tecnologia, criatividade e
-    personalidade</strong>.
-  </p>
-<div>
-      <h2>Entrevista ao Programa <em><a href="https://www.youtube.com/@panoramacomnaldoaraujo6782" target="_blank"
-            style="text-decoration: none; color: rgb(11, 131, 65);">
-            Panorama
-          </a> com o apresentador</em> <a href="https://www.instagram.com/naldo.araujo2/" target="_blank"
-          style="text-decoration: none; color: rgb(11, 131, 65);">
-          Naldo Ajaújo.
-        </a></h2>
-        
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/LNMarLZ-eT4?si=ozi5HSitItfO3R4o"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <p>03 de outubro de 2025</p>
+          <span>
+            Arraste para visualizar →
+          </span>
 
-      <p>
-        No dia <strong>03 de outubro de 2025</strong>, o programa <strong><em>Panorama</em></strong>, apresentado por
-        <strong>Naldo Araújo</strong>, destacou o encanto e a tradição dos <strong>brinquedos de miriti</strong>,
-        símbolo da arte popular de Abaetetuba. Durante a entrevista, o artesão <strong>Jonathan Diego</strong>
-        apresentou uma novidade que vem despertando a curiosidade do público: os
-        <strong>tacos de miriti pirografados</strong>, criados a partir da
-        <strong>fibra de miriti</strong> e transformados em <strong>ímãs de geladeira</strong>.
-      </p>
+        </div>
 
-      <p>
-        A inovação combina a leveza e sustentabilidade da fibra de miriti com a delicadeza da
-        <strong>pirografia</strong>, resultando em peças exclusivas que preservam a essência da tradição artesanal,
-        ao mesmo tempo em que trazem um toque moderno e funcional para o dia a dia.
-      </p>
-  </div>
 
-  <!-- ENCOMENDAS -->
-  <h2>Peças Personalizadas</h2>
+        <div class="scroll-gallery">
 
-  <p>
-    Criamos peças personalizadas para presentes, decoração, empresas,
-    eventos, homenagens, troféus, colecionadores e projetos especiais.
-  </p>
+          <img src="img/eu/0.jpg" alt="Trabalho em miriti - JD Arte em Miriti" loading="lazy">
 
-  <p>
-    Sua ideia pode se transformar em uma peça exclusiva feita à mão.
-  </p>
+          <img src="img/qua/p1.png" alt="Pirografia em miriti - projeto 1" loading="lazy">
 
-  <div class="cta-pirografia">
+          <img src="img/qua/p2.png" alt="Pirografia em miriti - projeto 2" loading="lazy">
 
-    <h2>Quer uma peça exclusiva?</h2>
+          <img src="img/qua/p3.png" alt="Pirografia em miriti - projeto 3" loading="lazy">
 
-    <p>
-      Entre em contato com a <strong>JD | Arte em Miriti</strong>
-      e solicite seu orçamento.
-    </p>
+          <img src="img/qua/p4.png" alt="Pirografia em miriti - projeto 4" loading="lazy">
 
-    <a href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo" target="_blank" class="btn-orcamento">
-      Solicitar Orçamento
-    </a>
+          <img src="img/qua/p5.png" alt="Pirografia em miriti - projeto 5" loading="lazy">
 
-  </div>
+          <img src="img/qua/p6.png" alt="Pirografia em miriti - projeto 6" loading="lazy">
 
-</div>
+          <img src="img/qua/p7.png" alt="Pirografia em miriti - projeto 7" loading="lazy">
+
+          <img src="img/qua/p8.png" alt="Pirografia em miriti - projeto 8" loading="lazy">
+
+          <img src="img/qua/p9.png" alt="Pirografia em miriti - projeto 9" loading="lazy">
+
+          <img src="img/qua/p10.png" alt="Pirografia em miriti - projeto 10" loading="lazy">
+
+          <img src="img/qua/p11.png" alt="Pirografia em miriti - projeto 11" loading="lazy">
+
+          <img src="img/qua/p12.png" alt="Pirografia em miriti - projeto 12" loading="lazy">
+
+          <img src="img/qua/p13.png" alt="Pirografia em miriti - projeto 13" loading="lazy">
+
+          <img src="img/qua/1.png" alt="Trabalho em miriti 1" loading="lazy">
+
+          <img src="img/qua/2.png" alt="Trabalho em miriti 2" loading="lazy">
+
+          <img src="img/qua/3.png" alt="Trabalho em miriti 3" loading="lazy">
+
+          <img src="img/qua/4.png" alt="Trabalho em miriti 4" loading="lazy">
+
+          <img src="img/qua/5.png" alt="Trabalho em miriti 5" loading="lazy">
+
+          <img src="img/qua/6.png" alt="Trabalho em miriti 6" loading="lazy">
+
+          <img src="img/qua/7.png" alt="Trabalho em miriti 7" loading="lazy">
+
+          <img src="img/qua/8.png" alt="Trabalho em miriti 8" loading="lazy">
+
+          <img src="img/qua/9.png" alt="Trabalho em miriti 9" loading="lazy">
+
+          <img src="img/qua/10.png" alt="Trabalho em miriti 10" loading="lazy">
+
+          <img src="img/qua/11.png" alt="Trabalho em miriti 11" loading="lazy">
+
+          <img src="img/qua/12.png" alt="Trabalho em miriti 12" loading="lazy">
+
+          <img src="img/qua/13.png" alt="Trabalho em miriti 13" loading="lazy">
+
+          <img src="img/qua/14.png" alt="Trabalho em miriti 14" loading="lazy">
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           MADEIRA
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          Pirografia na Madeira
+        </h2>
+
+        <p>
+          A madeira oferece diferentes possibilidades para a criação
+          de trabalhos pirografados. Cada espécie possui características
+          próprias, como textura, dureza e tonalidade, proporcionando
+          resultados diferentes em cada projeto.
+        </p>
+
+        <p>
+          Na <strong>JD | Arte em Miriti</strong>, utilizamos a
+          pirografia em peças como
+          <strong>
+            remos, tábuas decorativas, placas, painéis,
+            troféus e peças personalizadas
+          </strong>.
+        </p>
+
+        <p>
+          A combinação entre precisão, temperatura, pressão e movimento
+          da ferramenta permite criar desde traços delicados até
+          trabalhos com maior profundidade, contraste e realismo.
+        </p>
+
+
+        <div class="gallery-title">
+
+          <h3>
+            <i class="fa-solid fa-tree"></i>
+            Galeria — Trabalhos em Madeira
+          </h3>
+
+          <span>
+            Clique em uma imagem para ampliar
+          </span>
+
+        </div>
+
+
+        <div class="scroll-gallery">
+
+          <img src="img/pm/1.png" alt="Pirografia em madeira - projeto 1" loading="lazy">
+
+          <img src="img/pm/2.png" alt="Pirografia em madeira - projeto 2" loading="lazy">
+
+          <img src="img/pm/3.png" alt="Pirografia em madeira - projeto 3" loading="lazy">
+
+          <img src="img/pm/4.png" alt="Pirografia em madeira - projeto 4" loading="lazy">
+
+          <img src="img/pm/5.png" alt="Pirografia em madeira - projeto 5" loading="lazy">
+
+          <img src="img/pm/6.png" alt="Pirografia em madeira - projeto 6" loading="lazy">
+
+          <img src="img/pm/7.png" alt="Pirografia em madeira - projeto 7" loading="lazy">
+
+          <img src="img/pm/8.png" alt="Pirografia em madeira - projeto 8" loading="lazy">
+
+          <img src="img/pm/9.png" alt="Pirografia em madeira - projeto 9" loading="lazy">
+
+          <img src="img/pm/10.png" alt="Pirografia em madeira - projeto 10" loading="lazy">
+
+          <img src="img/pm/11.png" alt="Pirografia em madeira - projeto 11" loading="lazy">
+
+          <img src="img/pm/12.png" alt="Pirografia em madeira - projeto 12" loading="lazy">
+
+          <img src="img/pm/13.png" alt="Pirografia em madeira - projeto 13" loading="lazy">
+
+          <img src="img/pm/14.png" alt="Pirografia em madeira - projeto 14" loading="lazy">
+
+          <img src="img/pm/15.png" alt="Pirografia em madeira - projeto 15" loading="lazy">
+
+          <img src="img/pm/16.png" alt="Pirografia em madeira - projeto 16" loading="lazy">
+
+          <img src="img/pm/17.png" alt="Pirografia em madeira - projeto 17" loading="lazy">
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           PROCESSO
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          Nosso Processo
+        </h2>
+
+        <p>
+          Cada trabalho começa com a escolha e preparação adequada
+          do suporte. O desenho é planejado e aplicado cuidadosamente
+          antes da etapa de queima.
+        </p>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+
+            <span class="process-number">1</span>
+
+            <h3>Preparação</h3>
+
+            <p>
+              Escolha e preparação da superfície que receberá a arte.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <span class="process-number">2</span>
+
+            <h3>Desenho</h3>
+
+            <p>
+              Planejamento dos traços, formas, proporções e detalhes.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <span class="process-number">3</span>
+
+            <h3>Pirografia</h3>
+
+            <p>
+              Controle de calor, pressão e velocidade para criar
+              diferentes tonalidades.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <span class="process-number">4</span>
+
+            <h3>Detalhamento</h3>
+
+            <p>
+              Aplicação de sombras, texturas, contrastes e elementos
+              que valorizam a composição.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <span class="process-number">5</span>
+
+            <h3>Acabamento</h3>
+
+            <p>
+              A peça recebe o acabamento adequado ao projeto.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <span class="process-number">6</span>
+
+            <h3>Entrega</h3>
+
+            <p>
+              O resultado final é uma peça artesanal personalizada
+              e pronta para seu novo destino.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ARTE EXCLUSIVA
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          Uma Arte Feita à Mão
+        </h2>
+
+        <p>
+          Cada traço é realizado individualmente pelo artesão.
+          Por isso, cada trabalho possui características próprias
+          e carrega a identidade de quem o produziu.
+        </p>
+
+        <p>
+          Na <strong>JD | Arte em Miriti</strong>, buscamos transformar
+          materiais tradicionais em peças que unem
+          <strong>
+            cultura amazônica, arte, tecnologia, criatividade
+            e personalidade
+          </strong>.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           ENTREVISTA
+      ================================================= -->
+
+      <div class="content-section interview-section reveal">
+
+        <div class="interview-title">
+
+          <h2>
+            Entrevista ao Programa
+
+            <em>
+              <a
+                href="https://www.youtube.com/@panoramacomnaldoaraujo6782"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Panorama
+
+              </a>
+            </em>
+
+            com o apresentador
+
+            <a
+              href="https://www.instagram.com/naldo.araujo2/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Naldo Araújo.
+
+            </a>
+
+          </h2>
+
+        </div>
+
+
+        <div class="video-wrapper">
+
+          <iframe
+            src="https://www.youtube.com/embed/LNMarLZ-eT4?si=ozi5HSitItO3F4o"
+            title="Entrevista da JD Arte em Miriti ao Programa Panorama"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
+        <p class="date">
+          03 de outubro de 2025
+        </p>
+
+
+        <p>
+          No dia <strong>03 de outubro de 2025</strong>, o programa
+          <strong><em>Panorama</em></strong>, apresentado por
+          <strong>Naldo Araújo</strong>, destacou o encanto e a
+          tradição dos <strong>brinquedos de miriti</strong>,
+          símbolo da arte popular de Abaetetuba.
+        </p>
+
+        <p>
+          Durante a entrevista, o artesão
+          <strong>Jonathan Diego</strong> apresentou uma novidade
+          que vem despertando a curiosidade do público:
+          os <strong>tacos de miriti pirografados</strong>,
+          criados a partir da <strong>fibra de miriti</strong>
+          e transformados em <strong>ímãs de geladeira</strong>.
+        </p>
+
+        <p>
+          A inovação combina a leveza e sustentabilidade da fibra
+          de miriti com a delicadeza da <strong>pirografia</strong>,
+          resultando em peças exclusivas que preservam a essência
+          da tradição artesanal, ao mesmo tempo em que trazem um
+          toque moderno e funcional para o dia a dia.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           ENCOMENDAS
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          Peças Personalizadas
+        </h2>
+
+        <p>
+          Criamos peças personalizadas para presentes, decoração,
+          empresas, eventos, homenagens, troféus, colecionadores
+          e projetos especiais.
+        </p>
+
+        <p>
+          Sua ideia pode se transformar em uma peça exclusiva
+          feita à mão.
+        </p>
+
+
+        <div class="cta-pirografia">
+
+          <h2>
+            Quer uma peça exclusiva?
+          </h2>
+
+          <p>
+            Entre em contato com a
+            <strong>JD | Arte em Miriti</strong>
+            e solicite seu orçamento.
+          </p>
+
+          <a
+            href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-orcamento">
+
+            Solicitar Orçamento
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
 
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
 
   <footer>
+
     <div class="social-icons">
-      <a href="https://www.tiktok.com/@jd.arte.em.miriti" target="_blank"><i
-          class="fa-brands fa-tiktok"></i></a><!--EM <i class="fa-brands fa-ICONE DE REDE SOCIAL"></i> QUE PODE SER LIGADA POR <a href= -->
-      <a href="https://www.instagram.com/jdarteemmiriti/" target="_blank"><i
-          class="fa-brands fa-instagram"></i></a><!-- USE target="_blank" APÓS O LINK PARA ABRIR EM OUTRA PÁGINA-->
-      <a href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"
-        target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="https://www.youtube.com/@jd_experiencias_interativas" target="_blank"><i
-          class="fa-brands fa-youtube"></i></a>
+
+      <a
+        href="https://www.tiktok.com/@jd.arte.em.miriti"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok da JD Arte em Miriti">
+
+        <i class="fa-brands fa-tiktok"></i>
+
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/jdarteemmiriti/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram da JD Arte em Miriti">
+
+        <i class="fa-brands fa-instagram"></i>
+
+      </a>
+
+
+      <a
+        href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp da JD Arte em Miriti">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+      </a>
+
+
+      <a
+        href="https://www.youtube.com/@jd_experiencias_interativas"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube da JD Arte em Miriti">
+
+        <i class="fa-brands fa-youtube"></i>
+
+      </a>
+
     </div>
-    </div>
-    <p>&copy; JD Arte em Miriti © 2025 <br> CNPJ: 63.330.529/0001-93 <br> Todos os direitos reservados.</p>
+
+
+    <p>
+      &copy; JD Arte em Miriti © 2025
+      <br>
+      CNPJ: 63.330.529/0001-93
+      <br>
+      Todos os direitos reservados.
+    </p>
+
   </footer>
 
 
-  <!-- Ícone Flutuante para abrir o chat -->
-  <div id="chat-launcher"
-    style="position:fixed; bottom:20px; right:20px; background:#16213e; color:#fff; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center;  cursor:pointer; z-index:9998;"
-    onclick="toggleChat(true)">
-    <img class="bot"
+  <!-- =====================================================
+       CHATBOT — PRESERVADO
+  ===================================================== -->
+
+  <div
+    id="chat-launcher"
+    onclick="toggleChat(true)"
+    aria-label="Abrir chat"
+    role="button"
+    tabindex="0">
+
+    <img
+      class="bot"
       src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3k3Y3I3ZzVuNHExZW9xNXU1MnZoM2Jnb2gzcHpwOWwyMGV4MW5uYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E8lwC7e8gMXp4YK8xv/giphy.gif"
       alt="Quill">
+
   </div>
 
-  <!-- Painel Oculto do JD|Dev Chatbot -->
-  <div id="jddev-chat-panel"
-    style="position:fixed; right:0; top:0; height:90vh; width:350px; border-radius: 0 0 5% 5%; background:#1a1a2eea; color:#fff; box-shadow:-2px 0 10px rgba(0, 0, 0, 0.774);  z-index:9999; display:none; flex-direction:column;">
-    <div style="background:#16213e25; padding:1rem; display:flex; align-items:center; justify-content:space-between;">
-      <img class="bot2"
+
+  <!-- =====================================================
+       PAINEL DO CHATBOT
+  ===================================================== -->
+
+  <div
+    id="jddev-chat-panel"
+    role="dialog"
+    aria-label="Chat JD"
+    aria-modal="false">
+
+    <div
+      style="
+        background:#16213e25;
+        padding:1rem;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+      ">
+
+      <img
+        class="bot2"
         src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTB4Y2NtNXlmYWJ4NDcyN21qa3ltZmZuMmRhanhwZmk5aHhvZXZtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u91sUMwxrefoF4TQUI/giphy.gif"
         alt="Quill">
-      <h2 style="margin:0 0; font-size:2rem;">JD</h2>
-      <button onclick="toggleChat(false)"
-        style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✖</button>
+
+      <h2 style="margin:0; font-size:2rem;">
+        JD
+      </h2>
+
+      <button
+        onclick="toggleChat(false)"
+        style="
+          background:none;
+          border:none;
+          color:#fff;
+          font-size:1.2rem;
+          cursor:pointer;
+        "
+        aria-label="Fechar chat">
+
+        ✖
+
+      </button>
+
     </div>
 
-    <div id="chat-output" style="flex:1; padding:1rem; overflow-y:auto; font-size:1.5rem;"></div>
 
-    <div style="padding:1rem; border-top:1px solid #333;">
-      <input id="chat-input" type="text" placeholder="Digite sua pergunta..."
-        style="width:100%; font-family: Arial, sans-serif; text-transform: none; padding:0.5rem; border:none; border-radius:5px;"
-        onkeydown="if(event.key==='Enter'){sendToDialogflow()}" />
+    <div
+      id="chat-output"
+      style="
+        flex:1;
+        padding:1rem;
+        overflow-y:auto;
+        font-size:1.5rem;
+      ">
     </div>
+
+
+    <div
+      style="
+        padding:1rem;
+        border-top:1px solid #333;
+      ">
+
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Digite sua pergunta..."
+        style="
+          width:100%;
+          font-family:Arial,sans-serif;
+          text-transform:none;
+          padding:0.5rem;
+          border:none;
+          border-radius:5px;
+        "
+        onkeydown="if(event.key==='Enter'){sendToDialogflow()}">
+
+    </div>
+
   </div>
 
-  <!-- Modal Zoom -->
-  <div id="imgModal" class="modal" onclick="this.classList.remove('active')">
-    <img id="modalImg" src="" alt="">
+
+  <!-- =====================================================
+       MODAL DAS IMAGENS
+  ===================================================== -->
+
+  <div
+    id="imgModal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Visualização da imagem">
+
+    <button
+      class="modal-close"
+      id="modalClose"
+      aria-label="Fechar imagem">
+
+      ✖
+
+    </button>
+
+    <img
+      id="modalImg"
+      src=""
+      alt="Imagem ampliada">
+
   </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT DA GALERIA
+  ===================================================== -->
 
   <script>
-    document.querySelectorAll('.scroll-gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        const modal = document.getElementById('imgModal');
-        const modalImg = document.getElementById('modalImg');
-        modalImg.src = img.src;
-        modal.classList.add('active');
+
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalClose = document.getElementById("modalClose");
+
+    const galleryImages =
+      document.querySelectorAll(".scroll-gallery img");
+
+
+    galleryImages.forEach((img) => {
+
+      img.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
       });
+
     });
+
+
+    function fecharModal() {
+
+      modal.classList.remove("active");
+
+      modalImg.src = "";
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    modalClose.addEventListener("click", function (event) {
+
+      event.stopPropagation();
+
+      fecharModal();
+
+    });
+
+
+    modal.addEventListener("click", function (event) {
+
+      if (event.target === modal) {
+
+        fecharModal();
+
+      }
+
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+
+      if (event.key === "Escape") {
+
+        fecharModal();
+
+      }
+
+    });
+
+
+    /* Acessibilidade do botão do chatbot */
+
+    document
+      .getElementById("chat-launcher")
+      .addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+          event.preventDefault();
+
+          toggleChat(true);
+
+        }
+
+      });
+
   </script>
 
 
