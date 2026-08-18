@@ -208,96 +208,39 @@
     ===================================================== */
 
     .navbar {
-
       position: relative;
-
       z-index: 10;
-
       margin-top: 25px;
-
     }
-
 
     .navbar ul {
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
       gap: 8px;
-
       list-style: none;
-
-      flex-wrap: nowrap;
-
-      overflow-x: auto;
-
-      padding:
-        5px 0 12px;
-
+      flex-wrap: wrap;
     }
-
-
-    .navbar ul::-webkit-scrollbar {
-
-      height: 4px;
-
-    }
-
-
-    .navbar ul::-webkit-scrollbar-thumb {
-
-      background:
-        rgba(255, 255, 255, 0.5);
-
-      border-radius: 20px;
-
-    }
-
 
     .navbar a {
-
       display: block;
-
-      padding:
-        9px 13px;
-
-      white-space: nowrap;
-
+      padding: 9px 13px;
       border-radius: 30px;
-
       color: #fff;
-
       text-decoration: none;
-
       font-size: 0.88rem;
-
       font-weight: 600;
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.16);
-
-      transition:
-        var(--transicao);
-
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: var(--transicao);
+      backdrop-filter: blur(5px);
     }
 
-
-    .navbar a:hover {
-
+    .navbar a:hover,
+    .navbar a:focus {
       background: #fff;
-
       color: var(--verde-escuro);
-
-      transform:
-        translateY(-2px);
-
+      transform: translateY(-2px);
     }
 
 
