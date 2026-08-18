@@ -270,98 +270,100 @@
        MENU
     ===================================================== */
 
-    .navbar {
+    /* ================================
+   NAVBAR - JD | ARTE EM MIRITI
+   ================================ */
 
-      position: relative;
+.navbar {
+  width: 100%;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    110deg,
+    #087d3f 0%,
+    #075c43 30%,
+    #17244d 55%,
+    #8b5b20 80%,
+    #e19a18 100%
+  );
+  overflow-x: auto;
+  scrollbar-width: none;
+}
 
-      z-index: 10;
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 
-      margin-top: 25px;
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-    }
+.navbar li {
+  margin: 0;
+  padding: 0;
+}
 
+.navbar a {
+  display: block;
+  padding: 11px 16px;
+  border-radius: 25px;
 
-    .navbar ul {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
 
-      display: flex;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 
-      justify-content: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 3px 8px rgba(0, 0, 0, 0.08);
 
-      align-items: center;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-      gap: 8px;
+.navbar a:hover {
+  transform: translateY(-2px);
 
-      list-style: none;
+  background: rgba(255, 255, 255, 0.20);
 
-      flex-wrap: nowrap;
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
 
-      overflow-x: auto;
+/* ================================
+   CELULAR
+   ================================ */
 
-      padding:
-        5px 0 12px;
+@media (max-width: 768px) {
 
-    }
+  .navbar {
+    padding: 14px 12px;
+  }
 
+  .navbar ul {
+    justify-content: flex-start;
+    gap: 10px;
+  }
 
-    .navbar ul::-webkit-scrollbar {
-
-      height: 4px;
-
-    }
-
-
-    .navbar ul::-webkit-scrollbar-thumb {
-
-      background:
-        rgba(255, 255, 255, 0.5);
-
-      border-radius: 20px;
-
-    }
-
-
-    .navbar a {
-
-      display: block;
-
-      padding:
-        9px 13px;
-
-      white-space: nowrap;
-
-      border-radius: 30px;
-
-      color: #fff;
-
-      text-decoration: none;
-
-      font-size: 0.88rem;
-
-      font-weight: 600;
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.16);
-
-      transition:
-        var(--transicao);
-
-    }
-
-
-    .navbar a:hover {
-
-      background: #fff;
-
-      color: var(--verde-escuro);
-
-      transform:
-        translateY(-2px);
-
-    }
+  .navbar a {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+}
 
 
     /* =====================================================
