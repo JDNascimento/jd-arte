@@ -470,7 +470,7 @@
 
     .content-section p {
 
-      margin-bottom: 17px;
+      margin-bottom: 16px;
 
       color:
         var(--texto-claro);
@@ -1430,7 +1430,7 @@
       height: 100%;
 
       background:
-        rgba(0, 0, 0, 0.94);
+        rgba(0, 0, 0, 0.93);
 
       align-items: center;
 
@@ -1471,6 +1471,7 @@
       box-shadow:
         0 10px 40px
         rgba(0, 0, 0, 0.5);
+        cursor: default;
 
     }
 
@@ -1588,6 +1589,30 @@
 
       }
 
+      
+      .feature-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar ul {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 5px 0 10px;
+      }
+
+      .navbar ul::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .navbar a {
+        white-space: nowrap;
+      }
+
+      .content-section {
+        padding: 25px;
+      }
     }
 
 
@@ -1622,7 +1647,7 @@
       .journey-hero {
 
         padding:
-          40px 20px;
+          35px 20px;
 
         border-radius: 18px;
 
