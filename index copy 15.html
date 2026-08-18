@@ -1,249 +1,3317 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Portfólio e modelo para projetos">
-    <meta name="author" content="Jonathan Diego de Brito Nascimento">
-    <meta name="keywords" content="desenvolvedor, analista de sistemas, full-stack, front-end, back-end, Python, JavaScript, desenvolvimento web, programador, portfólio, tecnologia, software, aplicações web, banco de dados, API, UI/UX, freelancer">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
 
-    <title>🎨JD | Arte em Miriti</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://media.giphy.com/avatars/jonathandiegod4dc5346abb7480bbf7f9bdb58b45947/3jN0frLw8iB9/200h.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Importa ícones da biblioteca Font Awesome -->
-    <style>
-      header {
-  background-image: linear-gradient(rgb(0, 255, 0), rgb(0, 0, 128), rgb(255, 165, 0));
-  color: rgb(240, 240, 240);
-  padding: 20px 0;
-  text-align: center;
-}
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="description"
+    content="Minha Jornada — JD | Arte em Miriti. Conheça a trajetória de Jonathan Diego, artesão, desenvolvedor e criador de projetos que unem tecnologia, cultura amazônica, meio ambiente e arte em miriti.">
+
+  <meta name="author"
+    content="Jonathan Diego de Brito Nascimento">
+
+  <meta name="keywords"
+    content="JD Arte em Miriti, Jonathan Diego, minha jornada, artesão, Abaetetuba, miriti, artesanato amazônico, pirografia, tecnologia, Análise e Desenvolvimento de Sistemas, cultura amazônica, trajetória">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#16213e">
+
+  <meta name="apple-mobile-web-app-title"
+    content="JD | Arte em Miriti">
+
+  <title>🎨 JD | Arte em Miriti — Minha Jornada</title>
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FAVICON -->
+  <link rel="icon"
+    href="https://media.giphy.com/avatars/jonathandiegod4dc5346abb7480bbf7f9bdb58b45947/3jN0frLw8iB9/200h.png">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-      .scroll-gallery {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        padding: 10px 0;
-        scrollbar-width: thin;
-      }
-      .scroll-gallery img {
-        flex: 0 0 auto;
-        width: 250px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      }
-      
-       /* Modal para zoom das imagens */
-    .modal {
-      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:2000;
+  <style>
+
+    /* =====================================================
+       VARIÁVEIS
+    ===================================================== */
+
+    :root {
+
+      --verde: #0b8341;
+      --verde-escuro: #075b2d;
+
+      --azul: #16213e;
+      --azul-escuro: #0b1020;
+
+      --laranja: #f5a623;
+      --dourado: #d89b2b;
+
+      --branco: #ffffff;
+      --cinza: #f4f6f8;
+
+      --texto: #252525;
+      --texto-claro: #626262;
+
+      --borda: rgba(0, 0, 0, 0.08);
+
+      --sombra:
+        0 12px 35px rgba(0, 0, 0, 0.12);
+
+      --raio: 20px;
+
+      --transicao: 0.3s ease;
+
     }
-    .modal img {max-width:90%; max-height:90%; border-radius:10px;}
-    .modal.active {display:flex;}
-    </style>
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--texto);
+
+      line-height: 1.75;
+
+      background:
+        linear-gradient(
+          180deg,
+          #f7faf8 0%,
+          #ffffff 45%,
+          #f3f5f7 100%
+        );
+
+      overflow-x: hidden;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+
+      display: block;
+
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+
+      position: relative;
+
+      padding: 35px 20px 20px;
+
+      text-align: center;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #00a63c 0%,
+          #08733c 28%,
+          #16213e 58%,
+          #f5a623 100%
+        );
+
+      box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.18);
+
+      overflow: hidden;
+
+    }
+
+
+    header::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.08);
+
+      top: -180px;
+      right: -100px;
+
+    }
+
+
+    header::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.06);
+
+      bottom: -150px;
+      left: -80px;
+
+    }
+
+
+    .logo {
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .logo img {
+
+      width: 110px;
+      height: 110px;
+
+      margin:
+        0 auto 12px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border:
+        4px solid
+        rgba(255, 255, 255, 0.85);
+
+      box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.25);
+
+    }
+
+
+    .logo h1 {
+
+      font-size:
+        clamp(1.8rem, 4vw, 3rem);
+
+      font-weight: 800;
+
+      letter-spacing: -1px;
+
+      text-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, 0.25);
+
+    }
+
+
+    .slogan {
+
+      margin-top: 4px;
+
+      font-size:
+        clamp(0.9rem, 2vw, 1.15rem);
+
+      font-style: italic;
+
+      opacity: 0.95;
+
+    }
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    .navbar {
+
+      position: relative;
+
+      z-index: 10;
+
+      margin-top: 25px;
+
+    }
+
+
+    .navbar ul {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 8px;
+
+      list-style: none;
+
+      flex-wrap: nowrap;
+
+      overflow-x: auto;
+
+      padding:
+        5px 0 12px;
+
+    }
+
+
+    .navbar ul::-webkit-scrollbar {
+
+      height: 4px;
+
+    }
+
+
+    .navbar ul::-webkit-scrollbar-thumb {
+
+      background:
+        rgba(255, 255, 255, 0.5);
+
+      border-radius: 20px;
+
+    }
+
+
+    .navbar a {
+
+      display: block;
+
+      padding:
+        9px 13px;
+
+      white-space: nowrap;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 0.88rem;
+
+      font-weight: 600;
+
+      background:
+        rgba(255, 255, 255, 0.12);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    .navbar a:hover {
+
+      background: #fff;
+
+      color: var(--verde-escuro);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    main {
+
+      width:
+        min(1200px, 92%);
+
+      margin:
+        45px auto;
+
+    }
+
+
+    #jornada {
+
+      width: 100%;
+
+    }
+
+
+    /* =====================================================
+       HERO DA JORNADA
+    ===================================================== */
+
+    .journey-hero {
+
+      position: relative;
+
+      padding:
+        65px 35px;
+
+      margin-bottom: 35px;
+
+      text-align: center;
+
+      color: #fff;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(7, 91, 45, 0.97),
+          rgba(22, 33, 62, 0.97)
+        );
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .journey-hero::before {
+
+      content: "🌿";
+
+      position: absolute;
+
+      right: -20px;
+      bottom: -70px;
+
+      font-size: 13rem;
+
+      opacity: 0.05;
+
+    }
+
+
+    .journey-hero::after {
+
+      content: "🔥";
+
+      position: absolute;
+
+      left: -30px;
+      top: -80px;
+
+      font-size: 12rem;
+
+      opacity: 0.05;
+
+    }
+
+
+    .journey-badge {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: inline-block;
+
+      margin-bottom: 15px;
+
+      padding:
+        7px 16px;
+
+      border-radius: 30px;
+
+      background:
+        rgba(255, 255, 255, 0.13);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+      font-size: 0.85rem;
+
+      font-weight: bold;
+
+    }
+
+
+    .journey-hero h1 {
+
+      position: relative;
+
+      z-index: 2;
+
+      font-size:
+        clamp(2.3rem, 6vw, 4rem);
+
+      line-height: 1.1;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .journey-hero p {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 850px;
+
+      margin: auto;
+
+      font-size: 1.08rem;
+
+      opacity: 0.94;
+
+    }
+
+
+    /* =====================================================
+       SEÇÕES
+    ===================================================== */
+
+    .content-section {
+
+      background: #fff;
+
+      padding: 35px;
+
+      margin-bottom: 30px;
+
+      border-radius:
+        var(--raio);
+
+      border:
+        1px solid
+        var(--borda);
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .content-section h2 {
+
+      position: relative;
+
+      padding-left: 16px;
+
+      margin-bottom: 20px;
+
+      color: var(--azul);
+
+      font-size:
+        clamp(1.5rem, 3vw, 2rem);
+
+    }
+
+
+    .content-section h2::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 7px;
+
+      width: 5px;
+
+      height: 70%;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--verde),
+          var(--laranja)
+        );
+
+    }
+
+
+    .content-section h3 {
+
+      color:
+        var(--verde-escuro);
+
+    }
+
+
+    .content-section p {
+
+      margin-bottom: 17px;
+
+      color:
+        var(--texto-claro);
+
+      font-size: 1rem;
+
+    }
+
+
+    .content-section strong {
+
+      color:
+        var(--verde-escuro);
+
+    }
+
+
+    /* =====================================================
+       FRASE DE IMPACTO
+    ===================================================== */
+
+    .quote-box {
+
+      position: relative;
+
+      margin:
+        25px 0;
+
+      padding:
+        30px;
+
+      text-align: center;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #eef8f2,
+          #fff7e8
+        );
+
+      border:
+        1px solid
+        rgba(11, 131, 65, 0.1);
+
+    }
+
+
+    .quote-box i {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-size: 2rem;
+
+      color:
+        var(--verde);
+
+    }
+
+
+    .quote-box p {
+
+      margin: 0;
+
+      font-size: 1.2rem;
+
+      font-weight: bold;
+
+      font-style: italic;
+
+      color:
+        var(--azul);
+
+    }
+
+
+    /* =====================================================
+       GALERIA
+    ===================================================== */
+
+    .gallery-header {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .gallery-header h2 {
+
+      margin: 0;
+
+    }
+
+
+    .gallery-tip {
+
+      color: #777;
+
+      font-size: 0.8rem;
+
+      white-space: nowrap;
+
+    }
+
+
+    .scroll-gallery {
+
+      display: flex;
+
+      gap: 15px;
+
+      overflow-x: auto;
+
+      padding:
+        15px 4px 20px;
+
+      scroll-snap-type:
+        x mandatory;
+
+      scrollbar-width: thin;
+
+      scrollbar-color:
+        var(--verde)
+        transparent;
+
+    }
+
+
+    .scroll-gallery::-webkit-scrollbar {
+
+      height: 7px;
+
+    }
+
+
+    .scroll-gallery::-webkit-scrollbar-track {
+
+      background: #eee;
+
+      border-radius: 20px;
+
+    }
+
+
+    .scroll-gallery::-webkit-scrollbar-thumb {
+
+      background:
+        var(--verde);
+
+      border-radius: 20px;
+
+    }
+
+
+    .scroll-gallery img {
+
+      flex: 0 0 auto;
+
+      width: 285px;
+
+      height: 225px;
+
+      object-fit: cover;
+
+      border-radius: 16px;
+
+      border:
+        3px solid #fff;
+
+      cursor: zoom-in;
+
+      scroll-snap-align: start;
+
+      box-shadow:
+        0 7px 20px
+        rgba(0, 0, 0, 0.16);
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    .scroll-gallery img:hover {
+
+      transform:
+        scale(1.025);
+
+      box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.23);
+
+    }
+
+
+    /* =====================================================
+       VÍDEOS
+    ===================================================== */
+
+    .video-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+
+      margin-top: 25px;
+
+    }
+
+
+    .video-card {
+
+      overflow: hidden;
+
+      border-radius: 18px;
+
+      background:
+        #f5f7f8;
+
+      box-shadow:
+        0 7px 20px
+        rgba(0, 0, 0, 0.1);
+
+    }
+
+
+    .video-wrapper {
+
+      position: relative;
+
+      width: 100%;
+
+      aspect-ratio:
+        16 / 9;
+
+      background: #000;
+
+    }
+
+
+    .video-wrapper iframe {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      border: 0;
+
+    }
+
+
+    .video-caption {
+
+      padding:
+        15px 18px;
+
+    }
+
+
+    .video-caption h3 {
+
+      margin-bottom: 5px;
+
+    }
+
+
+    .video-caption p {
+
+      margin: 0;
+
+      font-size: 0.85rem;
+
+    }
+
+
+    /* =====================================================
+       SOUNDCLOUD
+    ===================================================== */
+
+    .soundcloud-card {
+
+      overflow: hidden;
+
+      margin-top: 25px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff,
+          #f4f6f8
+        );
+
+      border:
+        1px solid
+        var(--borda);
+
+    }
+
+
+    .soundcloud-title {
+
+      padding:
+        20px 22px 5px;
+
+    }
+
+
+    .soundcloud-title h2 {
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .soundcloud-title h2::before {
+
+      display: none;
+
+    }
+
+
+    .soundcloud-title p {
+
+      margin: 0;
+
+      font-size: 0.9rem;
+
+    }
+
+
+    .soundcloud-player {
+
+      padding:
+        15px;
+
+    }
+
+
+    .soundcloud-player iframe {
+
+      width: 100%;
+
+      min-height: 300px;
+
+      border: 0;
+
+      border-radius: 12px;
+
+    }
+
+
+    .soundcloud-credit {
+
+      padding:
+        0 20px 18px;
+
+      font-size: 10px;
+
+      color: #999;
+
+      line-height: 1.5;
+
+      overflow: hidden;
+
+    }
+
+
+    .soundcloud-credit a {
+
+      color: #999;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =====================================================
+       LINHA DO TEMPO
+    ===================================================== */
+
+    .timeline {
+
+      position: relative;
+
+      margin-top: 30px;
+
+      padding-left: 30px;
+
+    }
+
+
+    .timeline::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 8px;
+
+      top: 0;
+      bottom: 0;
+
+      width: 3px;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--verde),
+          var(--laranja)
+        );
+
+    }
+
+
+    .timeline-item {
+
+      position: relative;
+
+      margin-bottom: 25px;
+
+      padding:
+        24px;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff,
+          #f6f8f9
+        );
+
+      border:
+        1px solid
+        var(--borda);
+
+      box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.07);
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    .timeline-item:hover {
+
+      transform:
+        translateX(5px);
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .timeline-item::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: -31px;
+
+      top: 28px;
+
+      width: 17px;
+      height: 17px;
+
+      border-radius: 50%;
+
+      background:
+        var(--verde);
+
+      border:
+        4px solid #fff;
+
+      box-shadow:
+        0 0 0 2px
+        var(--verde);
+
+    }
+
+
+    .timeline-year {
+
+      display: inline-block;
+
+      margin-bottom: 8px;
+
+      padding:
+        5px 13px;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      background:
+        var(--verde);
+
+      font-size: 0.8rem;
+
+      font-weight: bold;
+
+    }
+
+
+    .timeline-item h3 {
+
+      margin-bottom: 8px;
+
+      color:
+        var(--azul);
+
+      font-size: 1.25rem;
+
+    }
+
+
+    .timeline-item p {
+
+      margin: 0;
+
+    }
+
+
+    /* =====================================================
+       DESTAQUES DA TRAJETÓRIA
+    ===================================================== */
+
+    .journey-highlights {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+
+      margin-top: 25px;
+
+    }
+
+
+    .highlight-card {
+
+      padding:
+        25px 20px;
+
+      text-align: center;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #f3f7f5
+        );
+
+      border:
+        1px solid
+        var(--borda);
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    .highlight-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .highlight-card i {
+
+      margin-bottom: 12px;
+
+      font-size: 2rem;
+
+      color:
+        var(--verde);
+
+    }
+
+
+    .highlight-card h3 {
+
+      margin-bottom: 7px;
+
+      color:
+        var(--azul);
+
+    }
+
+
+    .highlight-card p {
+
+      margin: 0;
+
+      font-size: 0.9rem;
+
+    }
+
+
+    /* =====================================================
+       CONQUISTA FINAL
+    ===================================================== */
+
+    .final-message {
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        45px 30px;
+
+      text-align: center;
+
+      color: #fff;
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #075b2d,
+          #16213e
+        );
+
+      box-shadow:
+        var(--sombra);
+
+    }
+
+
+    .final-message::after {
+
+      content: "🎨";
+
+      position: absolute;
+
+      right: 10px;
+      bottom: -45px;
+
+      font-size: 10rem;
+
+      opacity: 0.05;
+
+    }
+
+
+    .final-message h2 {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: #fff;
+
+      padding: 0;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .final-message h2::before {
+
+      display: none;
+
+    }
+
+
+    .final-message p {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 850px;
+
+      margin:
+        0 auto 10px;
+
+      color:
+        rgba(255, 255, 255, 0.9);
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+
+      margin-top: 60px;
+
+      padding:
+        40px 20px;
+
+      text-align: center;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #0b1020,
+          #16213e
+        );
+
+    }
+
+
+    .social-icons {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .social-icons a {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+
+      color: #fff;
+
+      background:
+        rgba(255, 255, 255, 0.1);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      text-decoration: none;
+
+      font-size: 1.25rem;
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    .social-icons a:hover {
+
+      background:
+        var(--verde);
+
+      transform:
+        translateY(-4px);
+
+    }
+
+
+    footer p {
+
+      font-size: 0.85rem;
+
+      opacity: 0.8;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       CHATBOT
+    ===================================================== */
+
+    #chat-launcher {
+
+      position: fixed;
+
+      bottom: 20px;
+      right: 20px;
+
+      width: 70px;
+      height: 70px;
+
+      background:
+        #16213e;
+
+      color: #fff;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+      z-index: 9998;
+
+      border:
+        3px solid
+        rgba(255, 255, 255, 0.8);
+
+      box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.3);
+
+      transition:
+        var(--transicao);
+
+    }
+
+
+    #chat-launcher:hover {
+
+      transform:
+        scale(1.08);
+
+    }
+
+
+    #chat-launcher .bot {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+    }
+
+
+    #jddev-chat-panel {
+
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      top: auto;
+
+      width:
+        min(390px, calc(100vw - 30px));
+
+      height:
+        min(700px, 88vh);
+
+      border-radius: 20px;
+
+      background:
+        rgba(26, 26, 46, 0.97);
+
+      color: #fff;
+
+      box-shadow:
+        -5px 10px 35px
+        rgba(0, 0, 0, 0.4);
+
+      z-index: 9999;
+
+      display: none;
+
+      flex-direction: column;
+
+      overflow: hidden;
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    #chat-output {
+
+      flex: 1;
+
+      padding: 1rem;
+
+      overflow-y: auto;
+
+      font-size:
+        1rem !important;
+
+    }
+
+
+    #chat-input {
+
+      font-size: 16px;
+
+      outline: none;
+
+    }
+
+
+    /* =====================================================
+       MODAL
+    ===================================================== */
+
+    .modal {
+
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background:
+        rgba(0, 0, 0, 0.94);
+
+      align-items: center;
+
+      justify-content: center;
+
+      z-index: 20000;
+
+      padding: 25px;
+
+      cursor: zoom-out;
+
+      backdrop-filter:
+        blur(5px);
+
+    }
+
+
+    .modal.active {
+
+      display: flex;
+
+      animation:
+        modalEntrada 0.25s ease;
+
+    }
+
+
+    .modal img {
+
+      max-width: 95%;
+
+      max-height: 90vh;
+
+      object-fit: contain;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 10px 40px
+        rgba(0, 0, 0, 0.5);
+
+    }
+
+
+    .modal-close {
+
+      position: absolute;
+
+      top: 20px;
+      right: 25px;
+
+      width: 45px;
+      height: 45px;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.15);
+
+      color: #fff;
+
+      font-size: 1.4rem;
+
+      cursor: pointer;
+
+      z-index: 2;
+
+    }
+
+
+    .modal-close:hover {
+
+      background:
+        rgba(255, 255, 255, 0.3);
+
+    }
+
+
+    @keyframes modalEntrada {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          scale(0.96);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ANIMAÇÃO
+    ===================================================== */
+
+    .reveal {
+
+      animation:
+        aparecer 0.7s ease both;
+
+    }
+
+
+    @keyframes aparecer {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(20px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVIDADE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .video-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .journey-highlights {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      header {
+
+        padding:
+          25px 12px 15px;
+
+      }
+
+
+      .logo img {
+
+        width: 85px;
+        height: 85px;
+
+      }
+
+
+      main {
+
+        width: 94%;
+
+        margin:
+          25px auto;
+
+      }
+
+
+      .journey-hero {
+
+        padding:
+          40px 20px;
+
+        border-radius: 18px;
+
+      }
+
+
+      .content-section {
+
+        padding:
+          22px 17px;
+
+        border-radius: 15px;
+
+      }
+
+
+      .content-section p {
+
+        font-size: 0.95rem;
+
+      }
+
+
+      .scroll-gallery img {
+
+        width: 245px;
+
+        height: 190px;
+
+      }
+
+
+      .gallery-header {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .gallery-tip {
+
+        white-space:
+          normal;
+
+      }
+
+
+      .timeline {
+
+        padding-left:
+          25px;
+
+      }
+
+
+      .timeline-item::before {
+
+        left: -27px;
+
+      }
+
+
+      #chat-launcher {
+
+        width: 60px;
+        height: 60px;
+
+        right: 15px;
+        bottom: 15px;
+
+      }
+
+
+      #jddev-chat-panel {
+
+        right: 10px;
+        bottom: 10px;
+
+        width:
+          calc(100vw - 20px);
+
+        height:
+          calc(100vh - 20px);
+
+        max-height:
+          750px;
+
+        border-radius: 18px;
+
+      }
+
+
+      .modal {
+
+        padding:
+          10px;
+
+      }
+
+
+      .modal img {
+
+        max-width: 100%;
+
+        max-height: 85vh;
+
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      * {
+
+        scroll-behavior:
+          auto !important;
+
+        animation-duration:
+          0.01ms !important;
+
+        transition-duration:
+          0.01ms !important;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
   <header>
+
     <div class="logo">
-      <img src="https://media.giphy.com/media/WBDZmEI1YGtVtayvsR/giphy.gif" alt="Logo Artesanato">
-      <h1>🎨JD | Arte em Miriti</h1>
-      <p class="slogan">O Coração da Fé Amazônica Esculpido à Mão.</p>
+
+      <img
+        src="https://media.giphy.com/media/WBDZmEI1YGtVtayvsR/giphy.gif"
+        alt="Logo JD Arte em Miriti">
+
+      <h1>
+        🎨 JD | Arte em Miriti
+      </h1>
+
+      <p class="slogan">
+        O Coração da Fé Amazônica Esculpido à Mão.
+      </p>
+
     </div>
-    <nav class="navbar">
+
+
+    <!-- ===================================================
+         NAVEGAÇÃO
+    =================================================== -->
+
+    <nav
+      class="navbar"
+      aria-label="Menu principal">
+
       <ul>
-        <li><a href="/index.html">Pirografia</a></li> 
-        <li><a href="/index copy.html">Feiras e ações</a></li>
-        <li><a href="/index copy 2.html">Prestígio dos Clientes</a></li>
-        <li><a href="/index copy 3.html">Casas de Passarinho</a></li>
-        <li><a href="/index copy 16.html">Kit de Pintura</a></li>
-        <li><a href="/index copy 4.html">Labirinto</a></li>
-        <li><a href="/index copy 5.html">Chaveiros</a></li>
-        <li><a href="/index copy 6.html">Imãs de Geladeira</a></li>
-        <li><a href="/index copy 7.html">Pau de Chuva</a></li>
-        <li><a href="/index copy 8.html">Chocalho</a></li>
-        <li><a href="/index copy 9.html">Lápis e Caneta</a></li>
-        <li><a href="/index copy 10.html">Brincos</a></li>
-        <li><a href="/index copy 11.html">Crucifixo</a></li>
-        <li><a href="/index copy 12.html">Pratos</a></li>
-        <li><a href="/index copy 13.html">xadrez</a></li>
-        <li><a href="/index copy 14.html">Barco</a></li>
-        <li><a href="/index copy 15.html">Minha Jornada</a></li>
-        <li><a href="/index copy 17.html">Parceiros</a></li>
+
+        <li>
+          <a href="/index.html">
+            Pirografia
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy.html">
+            Feiras e ações
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 2.html">
+            Prestígio dos Clientes
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 3.html">
+            Casas de Passarinho
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 16.html">
+            Kit de Pintura
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 4.html">
+            Labirinto
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 5.html">
+            Chaveiros
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 6.html">
+            Imãs de Geladeira
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 7.html">
+            Pau de Chuva
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 8.html">
+            Chocalho
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 9.html">
+            Lápis e Caneta
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 10.html">
+            Brincos
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 11.html">
+            Crucifixo
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 12.html">
+            Pratos
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 13.html">
+            xadrez
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 14.html">
+            Barco
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 15.html">
+            Minha Jornada
+          </a>
+        </li>
+
+        <li>
+          <a href="/index copy 17.html">
+            Parceiros
+          </a>
+        </li>
+
       </ul>
+
     </nav>
+
   </header>
 
+
+  <!-- SCRIPT PRINCIPAL -->
   <script src="script.js"></script>
 
+
+  <!-- =====================================================
+       CONTEÚDO
+  ===================================================== -->
+
   <main>
- 
+
+
     <section id="jornada">
-      <h1>Minha Jornada</h1>
-      <div class="scroll-gallery">
-  <img src="img/eu/0.jpg" alt="eu-0">      
-  <img src="img/eu/1.jpg" alt="eu-1">
-  <img src="img/eu/2.png" alt="eu-2">
-  <img src="img/eu/3.png" alt="eu-3">
-  <img src="img/eu/4.jpg" alt="eu-4">
-  <img src="img/eu/5.jpg" alt="eu-5">
-  <img src="img/eu/6.jpg" alt="eu-6">
-  <img src="img/eu/7.jpg" alt="eu-7">
-  <img src="img/eu/8.jpg" alt="eu-8">
-  <img src="img/eu/9.jpg" alt="eu-9">
-  <img src="img/eu/10.jpg" alt="eu-10">
-  <img src="img/eu/11.jpg" alt="eu-11">
-  <img src="img/eu/12.jpg" alt="eu-12">
-  <img src="img/eu/13.jpg" alt="eu-13">
-  <img src="img/eu/14.jpg" alt="eu-14">
-  <img src="img/eu/15.jpg" alt="eu-15">
-</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JfW_PaxrqfQ?si=gkoh9URKbi4kggR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_O9VrZe9XdE?si=garGhCCt2NF9Qj2Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+      <!-- =================================================
+           HERO
+      ================================================= -->
+
+      <div class="journey-hero reveal">
+
+        <span class="journey-badge">
+          🌿 Minha história • Minha arte • Minha identidade
+        </span>
+
+        <h1>
+          Minha Jornada
+        </h1>
+
+        <p>
+          Uma trajetória construída entre a Amazônia,
+          a educação, o meio ambiente, a tecnologia,
+          a família e a arte em miriti.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           GALERIA
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <div class="gallery-header">
+
+          <h2>
+            <i class="fa-solid fa-images"></i>
+            Momentos da Jornada
+          </h2>
+
+          <span class="gallery-tip">
+            Clique nas imagens para ampliar
+          </span>
+
+        </div>
+
+
+        <div class="scroll-gallery">
+
+          <img
+            src="img/eu/0.jpg"
+            alt="Jonathan Diego - momento da jornada 0"
+            loading="lazy">
+
+          <img
+            src="img/eu/1.jpg"
+            alt="Jonathan Diego - momento da jornada 1"
+            loading="lazy">
+
+          <img
+            src="img/eu/2.png"
+            alt="Jonathan Diego - momento da jornada 2"
+            loading="lazy">
+
+          <img
+            src="img/eu/3.png"
+            alt="Jonathan Diego - momento da jornada 3"
+            loading="lazy">
+
+          <img
+            src="img/eu/4.jpg"
+            alt="Jonathan Diego - momento da jornada 4"
+            loading="lazy">
+
+          <img
+            src="img/eu/5.jpg"
+            alt="Jonathan Diego - momento da jornada 5"
+            loading="lazy">
+
+          <img
+            src="img/eu/6.jpg"
+            alt="Jonathan Diego - momento da jornada 6"
+            loading="lazy">
+
+          <img
+            src="img/eu/7.jpg"
+            alt="Jonathan Diego - momento da jornada 7"
+            loading="lazy">
+
+          <img
+            src="img/eu/8.jpg"
+            alt="Jonathan Diego - momento da jornada 8"
+            loading="lazy">
+
+          <img
+            src="img/eu/9.jpg"
+            alt="Jonathan Diego - momento da jornada 9"
+            loading="lazy">
+
+          <img
+            src="img/eu/10.jpg"
+            alt="Jonathan Diego - momento da jornada 10"
+            loading="lazy">
+
+          <img
+            src="img/eu/11.jpg"
+            alt="Jonathan Diego - momento da jornada 11"
+            loading="lazy">
+
+          <img
+            src="img/eu/12.jpg"
+            alt="Jonathan Diego - momento da jornada 12"
+            loading="lazy">
+
+          <img
+            src="img/eu/13.jpg"
+            alt="Jonathan Diego - momento da jornada 13"
+            loading="lazy">
+
+          <img
+            src="img/eu/14.jpg"
+            alt="Jonathan Diego - momento da jornada 14"
+            loading="lazy">
+
+          <img
+            src="img/eu/15.jpg"
+            alt="Jonathan Diego - momento da jornada 15"
+            loading="lazy">
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           VÍDEOS
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          <i class="fa-brands fa-youtube"></i>
+          Registros da Jornada
+        </h2>
+
+        <p>
+          Alguns momentos que ajudam a contar essa história
+          através de imagens, experiências e registros.
+        </p>
+
+
+        <div class="video-grid">
+
+
+          <!-- VÍDEO 1 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://www.youtube.com/embed/JfW_PaxrqfQ?si=gkoh9URKbi4kggR9"
+                title="JD Arte em Miriti - Minha Jornada"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+
+            <div class="video-caption">
+
+              <h3>
+                Minha Jornada
+              </h3>
+
+              <p>
+                Um registro audiovisual da trajetória.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- VÍDEO 2 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://www.youtube.com/embed/_O9VrZe9XdE?si=garGhCCt2NF9Qj2Z"
+                title="JD Arte em Miriti - Trajetória"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+
+            </div>
+
+            <div class="video-caption">
+
+              <h3>
+                Arte e trajetória
+              </h3>
+
+              <p>
+                Outro capítulo registrado em vídeo.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           MÚSICA
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <div class="soundcloud-card">
+
+          <div class="soundcloud-title">
+
+            <h2>
+              🎧 JD Arte em Miriti — A Jornada Amazônica
+            </h2>
+
+            <p>
+              “Onde o som da floresta encontra a alma do artesão —
+              essa é a trilha sonora da minha jornada.”
+            </p>
+
+          </div>
+
+
+          <div class="soundcloud-player">
+
+            <iframe
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2200441011&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              title="JD Arte em Miriti - A Jornada Amazônica">
+            </iframe>
+
+          </div>
+
+
+          <div class="soundcloud-credit">
+
+            <a
+              href="https://soundcloud.com/jonathan-brito-55276268"
+              title="Jonathan Brito"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Jonathan Brito
+
+            </a>
+
+            ·
+
+            <a
+              href="https://soundcloud.com/jonathan-brito-55276268/jd_arte_em_miriti"
+              title="JD_Arte_em_Miriti__A_Jornada_Amazônica_de_Tecnologia,_Ancestral"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              JD_Arte_em_Miriti__A_Jornada_Amazônica_de_Tecnologia,_Ancestral
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           FRASE
+      ================================================= -->
+
+      <div class="quote-box reveal">
+
+        <i class="fa-solid fa-quote-left"></i>
+
+        <p>
+          “Onde o som da floresta encontra a alma do artesão,
+          nasce uma história que merece ser contada.”
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           TRAJETÓRIA
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          JD Arte em Miriti — Minha Trajetória
+        </h2>
+
+
+        <p>
+          Meu nome é <strong>Jonathan Diego</strong>.
+          Sou <strong>artesão registrado no PAB
+          (Programa do Artesanato Brasileiro)</strong>
+          e formado em
+          <strong>Análise e Desenvolvimento de Sistemas</strong>.
+        </p>
+
+        <p>
+          Mas a minha história começa muito antes dos títulos
+          e conquistas. Ela tem raízes profundas na cidade de
+          <strong>Belém do Pará</strong>, onde nasci e cresci.
+        </p>
+
+
+        <!-- LINHA DO TEMPO -->
+
+        <div class="timeline">
+
+
+          <!-- 1 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              Origens
+            </span>
+
+            <h3>
+              Origens e Raízes Familiares
+            </h3>
+
+            <p>
+              Sou neto de
+              <strong>Dona Benedita de Jesus Brito</strong>,
+              uma mulher guerreira, de coração imenso e mãos
+              curadoras. Guardava consigo os saberes dos antigos —
+              conhecimentos de <em>fitoterapia</em> e da cura pelos
+              elementos da natureza.
+            </p>
+
+            <p>
+              Filhos de <strong>Dona Maria do Socorro</strong>
+              e <strong>Seu Reginaldo Cardoso</strong>,
+              cresci em um lar repleto de música, fé e alegria,
+              ao lado das minhas irmãs
+              <strong>Dheme Bethania</strong> e
+              <strong>Jhully do Rosário</strong>.
+            </p>
+
+            <p>
+              Era comum ouvir, entre risadas e encontros de família,
+              vozes como
+              <em>Zeca Pagodinho, Roberto Carlos,
+              Paulo Diniz</em> e <em>Beth Carvalho</em>.
+            </p>
+
+          </article>
+
+
+          <!-- 2 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              Infância
+            </span>
+
+            <h3>
+              Terra Firme — O Início da Jornada
+            </h3>
+
+            <p>
+              Minha infância foi vivida no
+              <strong>Bairro da Terra Firme</strong>,
+              também conhecido como <strong>Montese</strong>,
+              um dos territórios populares de Belém.
+            </p>
+
+            <p>
+              Apesar dos desafios, o bairro sempre pulsou com
+              a força do seu povo: trabalhadores, comerciantes,
+              feirantes e famílias que transformam diariamente
+              dificuldades em resistência.
+            </p>
+
+            <p>
+              A Terra Firme me ensinou que é possível
+              <strong>florescer mesmo em meio às adversidades</strong>.
+            </p>
+
+          </article>
+
+
+          <!-- 3 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2003
+            </span>
+
+            <h3>
+              Descobrindo a Natureza e a Cultura
+            </h3>
+
+            <p>
+              No ano de <strong>2003</strong>, no
+              <strong>Museu Emílio Goeldi</strong>,
+              participei do <strong>Projeto Monitor Ambiental</strong>,
+              liderado pela Dra. <strong>Vera Bastos</strong>,
+              por quem guardo muita gratidão.
+            </p>
+
+            <p>
+              O projeto reunia jovens de escolas públicas para
+              atuar na conscientização ambiental.
+            </p>
+
+            <p>
+              Lá conheci o hoje ambientalista, biólogo e futuro
+              doutor <strong>Juvenal Damasceno</strong>,
+              um excelente amigo que contribuiu positivamente
+              nessa trajetória.
+            </p>
+
+            <p>
+              No Goeldi encontrei o incentivo cultural que mudou
+              meu rumo: o contato com a
+              <strong>fauna, a flora</strong> e a magia dos
+              <strong>movimentos culturais amazônicos</strong>.
+            </p>
+
+          </article>
+
+
+          <!-- 4 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2005
+            </span>
+
+            <h3>
+              Primeiros Trabalhos e Aprendizados
+            </h3>
+
+            <p>
+              Em <strong>2005</strong>, trabalhei na
+              <strong>Neon Aquário</strong>, onde aprendi sobre
+              montagem de aquários e criação de peixes ornamentais.
+            </p>
+
+          </article>
+
+
+          <!-- 5 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2006
+            </span>
+
+            <h3>
+              Mangal das Garças
+            </h3>
+
+            <p>
+              No ano seguinte, fui convidado a integrar a equipe
+              do <strong>Mangal das Garças</strong> como
+              adestrador de animais.
+            </p>
+
+            <p>
+              Foram anos de aprendizado intenso, lidando com espécies
+              das famílias <em>Felidae</em> e <em>Psittacidae</em>,
+              além de serpentes, anfíbios e insetos.
+            </p>
+
+            <p>
+              Também participei da criação da espécie de borboleta
+              <em>Caligo brasiliensis</em>, chegando a soltar mais
+              de cinquenta borboletas por dia no borboletário durante
+              uma semana.
+            </p>
+
+            <p>
+              Outra experiência marcante foi o cultivo, desde as
+              sementes, da <strong>Vitória-Régia</strong>,
+              hoje presente no parque.
+            </p>
+
+          </article>
+
+
+          <!-- 6 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2009
+            </span>
+
+            <h3>
+              Arte e Meio Ambiente
+            </h3>
+
+            <p>
+              Em <strong>2009</strong>, atuei como
+              <strong>auxiliar ambiental</strong>,
+              unindo arte e consciência ecológica.
+            </p>
+
+            <p>
+              Produzíamos peças artesanais com materiais reciclados
+              e realizávamos apresentações teatrais em escolas
+              e instituições privadas.
+            </p>
+
+            <p>
+              O objetivo era levar mensagens sobre o cuidado
+              com o meio ambiente e mostrar que resíduos também
+              podem ser transformados em arte.
+            </p>
+
+          </article>
+
+
+          <!-- 7 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2013
+            </span>
+
+            <h3>
+              Barcarena — Novo Capítulo
+            </h3>
+
+            <p>
+              Em <strong>2013</strong>, recebi um novo convite
+              profissional da Professora
+              <strong>Olinda</strong>, coordenadora de meio ambiente,
+              para trabalhar no município de
+              <strong>Barcarena (PA)</strong>.
+            </p>
+
+            <p>
+              Atuei junto à Secretaria de Meio Ambiente,
+              promovendo a conscientização da população sobre
+              pontos críticos de lixo na cidade.
+            </p>
+
+          </article>
+
+
+          <!-- 8 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2015 — 2021
+            </span>
+
+            <h3>
+              Consolidação Profissional
+            </h3>
+
+            <p>
+              Dois anos depois, fui promovido a
+              <strong>auxiliar administrativo</strong>,
+              a convite de um grande coordenador e amigo,
+              <strong>Anderson Lobo</strong>.
+            </p>
+
+            <p>
+              Exerci essa função até <strong>2021</strong>,
+              quando passei a integrar a empresa
+              <strong>Recicle</strong>.
+            </p>
+
+            <p>
+              Mais uma vez fui promovido, agora como
+              <strong>assistente administrativo</strong>.
+            </p>
+
+          </article>
+
+
+          <!-- 9 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2022
+            </span>
+
+            <h3>
+              Chegada a Abaetetuba
+            </h3>
+
+            <p>
+              Em <strong>2022</strong>, solicitei transferência
+              para o município de <strong>Abaetetuba</strong>,
+              onde poderia ficar mais próximo da minha esposa,
+              <strong>Mariane de Sarges Miranda</strong>.
+            </p>
+
+            <p>
+              Mariane é herdeira de uma tradicional família de
+              artesãos de brinquedos de Miriti.
+            </p>
+
+            <p>
+              Esse momento aproximou ainda mais minha vida
+              profissional da cultura do miriti.
+            </p>
+
+          </article>
+
+
+          <!-- 10 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2023
+            </span>
+
+            <h3>
+              Família, Fé e Novos Caminhos
+            </h3>
+
+            <p>
+              Em <strong>2023</strong>, nasceu minha filha
+              <strong>Aurora</strong>, um novo sol que iluminou
+              minha vida.
+            </p>
+
+            <p>
+              Durante esse período, retomei os estudos e concluí
+              minha graduação em
+              <strong>Análise e Desenvolvimento de Sistemas</strong>.
+            </p>
+
+            <p>
+              Ao mesmo tempo, mergulhei mais profundamente na
+              arte do <strong>Miriti</strong>.
+            </p>
+
+            <p>
+              Desejando inovar essa nobre tradição, criei o
+              <strong>Labirinto de Miriti</strong>, um brinquedo
+              voltado ao estímulo da percepção e do raciocínio,
+              pensado para crianças e adultos.
+            </p>
+
+            <p>
+              A aceitação foi extraordinária:
+              todos os brinquedos foram vendidos no
+              <em>Miriti Fest</em>.
+            </p>
+
+          </article>
+
+
+          <!-- 11 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              2025
+            </span>
+
+            <h3>
+              Inovação e Pirografia no Miriti
+            </h3>
+
+            <p>
+              Em <strong>2025</strong>, aprofundei-me na
+              <strong>arte da pirografia</strong> e comecei a
+              aplicá-la sobre a fibra do Miriti.
+            </p>
+
+            <p>
+              Passei a criar
+              <strong>
+                ímãs de geladeira, maracás, paus de chuva,
+                quadros, barcos e canoas
+              </strong>.
+            </p>
+
+            <p>
+              Cada peça carrega o fogo da ancestralidade e a
+              inovação da técnica — um encontro entre o antigo
+              e o novo, entre o ferro, o fogo e a tradição amazônica.
+            </p>
+
+            <p>
+              Essa fusão deu origem a uma nova vertente dentro
+              da cultura dos brinquedos de Miriti.
+            </p>
+
+          </article>
+
+
+          <!-- 12 -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-year">
+              Hoje
+            </span>
+
+            <h3>
+              JD Arte em Miriti — Um Sonho Concretizado
+            </h3>
+
+            <p>
+              De toda essa trajetória nasceu a
+              <strong>JD Arte em Miriti</strong>.
+            </p>
+
+            <p>
+              A empresa representa não apenas o meu trabalho,
+              mas também a força cultural de uma região inteira.
+            </p>
+
+            <p>
+              Participamos da
+              <strong>Feira de Brinquedos de Miriti</strong>
+              de Abaetetuba em Belém e da
+              <strong>FAC — Feira de Artesanato e Cultura</strong>,
+              promovida pelo SEBRAE no Porto Futuro.
+            </p>
+
+            <p>
+              Seguimos levando conosco a
+              <strong>arte, a fé, a criatividade,
+              a tecnologia e o orgulho de ser parte viva
+              da cultura amazônica</strong>.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           DESTAQUES
+      ================================================= -->
+
+      <div class="content-section reveal">
+
+        <h2>
+          O que essa jornada representa
+        </h2>
+
+        <div class="journey-highlights">
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-tree"></i>
+
+            <h3>
+              Meio Ambiente
+            </h3>
+
+            <p>
+              Uma trajetória construída através do contato
+              com a natureza e da educação ambiental.
+            </p>
+
+          </div>
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+            <h3>
+              Tecnologia
+            </h3>
+
+            <p>
+              A formação em Análise e Desenvolvimento de Sistemas
+              trouxe novas ferramentas para criar e inovar.
+            </p>
+
+          </div>
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>
+              Pirografia
+            </h3>
+
+            <p>
+              O fogo transformou-se em uma nova linguagem
+              para contar histórias sobre o miriti.
+            </p>
+
+          </div>
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>
+              Família
+            </h3>
+
+            <p>
+              A família é uma das principais forças por trás
+              das escolhas e dos novos caminhos.
+            </p>
+
+          </div>
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h3>
+              Cultura
+            </h3>
+
+            <p>
+              A arte nasce da tradição, mas também pode
+              evoluir através da criatividade.
+            </p>
+
+          </div>
+
+
+          <div class="highlight-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>
+              Inovação
+            </h3>
+
+            <p>
+              Transformar ideias em peças que conectam
+              passado, presente e futuro.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           MENSAGEM FINAL
+      ================================================= -->
+
+      <div class="final-message reveal">
+
+        <h2>
+          Minha história continua...
+        </h2>
+
+        <p>
+          Cada peça criada é mais um capítulo dessa jornada.
+        </p>
+
+        <p>
+          Da Terra Firme ao universo do Miriti,
+          da tecnologia à arte, do meio ambiente à cultura:
+          sigo transformando experiências em criação.
+        </p>
+
+        <p>
+          <strong style="color:#fff;">
+            JD | Arte em Miriti
+          </strong>
+          — tradição que se reinventa sem perder suas raízes.
+        </p>
+
+      </div>
+
 
     </section>
 
-    <section>
-        <h1>🎧 JD Arte em Miriti - A Jornada Amazônica</h1>
-        <h2>“Onde o som da floresta encontra a alma do artesão — essa é a trilha sonora da minha jornada.”</h2>
-        <p><li>Clique em "Ouvir no vavegador"</li></p>
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2200441011&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jonathan-brito-55276268" title="Jonathan Brito" target="_blank" style="color: #cccccc; text-decoration: none;">Jonathan Brito</a> · <a href="https://soundcloud.com/jonathan-brito-55276268/jd_arte_em_miriti" title="JD_Arte_em_Miriti__A_Jornada_Amazônica_de_Tecnologia,_Ancestral" target="_blank" style="color: #cccccc; text-decoration: none;">JD_Arte_em_Miriti__A_Jornada_Amazônica_de_Tecnologia,_Ancestral</a></div>
-    </section>
-
-    <section>
-      
-<h1>JD Arte em Miriti – “Minha Trajetória”</h1>
-
-<h2>Origens e Raízes Familiares</h2>
-<p>
-Meu nome é <strong>Jonathan Diego</strong>. Sou <strong>artesão registrado no PAB (Programa do Artesanato Brasileiro)</strong> e formado em <strong>Análise e Desenvolvimento de Sistemas</strong>. 
-Mas a minha história começa muito antes dos títulos e conquistas. Ela tem raízes profundas na cidade de <strong>Belém do Pará</strong>, onde nasci e cresci.
-</p>
-
-<p>
-Sou neto de <strong>Dona Benedita de Jesus Brito</strong>, uma mulher guerreira, de coração imenso e mãos curadoras. 
-Guardava consigo os saberes dos antigos — conhecimentos de <em>fitoterapia</em> e da cura pelos elementos da natureza — herdados de uma cultura viva entre <strong>caboclos, quilombolas e povos indígenas</strong>. 
-Filho de <strong>Dona Maria do Socorro</strong>, mãe tradicional e afetuosa, e de <strong>Seu Reginaldo Cardoso</strong>, homem trabalhador e católico fervoroso, tenho também minhas irmãs <strong>Dheme Bethania</strong> que é uma vencedora e fonte de inspiração e a caçula <strong>Jhully do Rosário</strong> que considero como irmã e filha, ela tem um grande coração que cabe todo mundo "minha irmã cabeção", cresci em um lar repleto de música, fé e alegria. 
-Era comum ouvir, entre risadas e encontros de família, as vozes de <em>Zeca Pagodinho, Roberto Carlos, Paulo Diniz</em> e <em>Beth Carvalho</em>.
-</p>
-
-<h2>Terra Firme: O Início da Jornada</h2>
-<p>
-Minha infância foi vivida no <strong>Bairro da Terra Firme</strong>, também conhecido como <strong>Montese</strong> — um dos territórios mais populares de Belém, marcado por contrastes, desafios e muita resistência. 
-Apesar da ausência de políticas públicas, o bairro sempre pulsou com a força do seu povo: trabalhadores incansáveis dos comércios, das feiras e da vida cotidiana. 
-A Terra Firme é, antes de tudo, um símbolo de luta, cultura e esperança — um lugar que me ensinou que é possível florescer mesmo em meio às adversidades.
-</p>
-
-<h2>Descobrindo a Natureza e a Cultura</h2>
-<p>
-Acredito que ser artesão é mais do que possuir um dom; é carregar nas mãos e no coração as experiências de uma vida inteira.<br> 
-No ano de 2003 no <strong>Museu Emílio Goeldi</strong>, participei do <strong>Projeto Monitor Ambiental</strong> liderado pela Dra <strong>Vera Bastos</strong> de que quardo muita gratidão, o projeto reunia jovens de escolas públicas para atuar na conscientização ambiental, lá conheci o hoje, ambientalista, Biologo e futuro Doutor  <strong>Juvenal Damasceno</strong>, um excelente amigo que contribuiu positivamente nessa trajetória. 
-No Goeldi encontrei o incentivo cultural que mudou meu rumo: o contato com a <strong>fauna, a flora</strong> e a magia dos <strong>movimentos culturais amazônicos</strong>.
-</p>
-
-<h2>Os Primeiros Trabalhos e Aprendizados</h2>
-<p>
-Em <strong>2005</strong>, trabalhei na <strong>Neon Aquário</strong>, onde aprendi sobre montagem de aquários e criação de peixes ornamentais. 
-No ano seguinte, fui convidado para integrar a equipe do <strong>Mangal das Garças</strong> como adestrador de animais. 
-Foram anos de aprendizado intenso, lidando com espécies das famílias <em>Felidae</em> e <em>Psittacidae</em>, além de serpentes, anfíbios e insetos. 
-Fui o maior criador da espécie de borboleta <em>Caligo brasiliensis</em>, soltando mais de cinquenta borboletas por dia no borboletário por uma semana — uma experiência inesquecível, fiz o cultivo desde as sementes até o crescimento da <strong>Vitória Regia</strong> que hoje está presente no parque.
-</p>
-
-<h2>União entre Arte e Meio Ambiente</h2>
-<p>
-Em <strong>2009</strong>, atuei como <strong>auxiliar ambiental</strong>, unindo arte e consciência ecológica. 
-Produzíamos peças artesanais com materiais reciclados e realizávamos apresentações teatrais em escolas e instituições privadas, levando mensagens sobre o cuidado com o meio ambiente e a transformação dos resíduos em arte.
-</p>
-
-<h2>Consolidação Profissional e Crescimento</h2>
-<p>
-Em <strong>2013</strong>, recebi um novo convite profissional feito pela Professora <strong>Olinda</strong> coordenadora de meio ambiente, para trabalhar no município de <strong>Barcarena (PA)</strong> com a Secretaria de Meio Ambiente, promovendo a conscientização da população sobre os pontos críticos de lixo na cidade. 
-Dois anos depois, fui promovido a <strong>auxiliar administrativo</strong> a convite de um grande coordenador e amigo <strong>Anderson Lobo</strong>, exerci nesta função até <strong>2021</strong>, quando passei a integrar a empresa <strong>Recicle</strong>. 
-Mais uma vez fui promovido, agora como <strong>assistente administrativo</strong>. 
-Em <strong>2022</strong>, solicitei transferência para o município de <strong>Abaetetuba</strong>, onde poderia ficar mais próximo da minha esposa, <strong>Mariane de Sarges Miranda</strong> — herdeira de uma tradicional família de artesãos de brinquedos de Miriti.
-</p>
-
-<h2>Família, Fé e Novos Caminhos</h2>
-<p>
-Em <strong>2023</strong>, nasceu minha filha <strong>Aurora</strong>, um novo sol que iluminou minha vida. 
-Durante esse período, retomei os estudos e concluí minha graduação, enquanto também mergulhava mais fundo na arte do <strong>Miriti</strong>. 
-Desejei inovar essa nobre tradição e criei o <strong>Labirinto de Miriti</strong> — um brinquedo que estimula a percepção e o raciocínio, voltado tanto para crianças quanto para adultos com autismo. 
-A aceitação foi extraordinária: todos os brinquedos foram vendidos no <em>Miriti Fest</em>.
-</p>
-
-<h2>Inovação e Pirografia no Miriti</h2>
-<p>
-Em <strong>2025</strong>, aprofundei-me na <strong>arte da pirografia</strong> e comecei a aplicá-la sobre a fibra do Miriti, criando <strong>ímãs de geladeira, maracás, paus de chuva, quadros, barcos e canoas</strong>. 
-Cada peça carrega o fogo da ancestralidade e a inovação da técnica — um encontro entre o antigo e o novo, entre o ferro, o fogo e a tradição amazônica. 
-Essa fusão deu origem a uma nova vertente dentro da cultura dos brinquedos de Miriti.
-</p>
-
-<h2>JD Arte em Miriti: Um Sonho Concretizado</h2>
-<p>
-De toda essa trajetória nasceu a <strong>JD Arte em Miriti</strong> — empresa que representa não apenas o meu trabalho, mas também a força cultural de uma região inteira. 
-Participamos da <strong>Feira de Brinquedos de Miriti</strong> de Abaetetuba em Belém, e da <strong>FAC – Feira de Artesanato e Cultura</strong> promovida pelo SEBRAE no Porto Futuro. 
-Agora, nos preparamos para a <strong>COP 30</strong>, levando conosco a arte, a fé e o orgulho de ser parte viva desse patrimônio cultural amazônico.
-</p>
-
-</section>
-    
   </main>
 
-  
 
-
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
 
   <footer>
-      <div class="social-icons">
-                <a href="https://www.tiktok.com/@jd.arte.em.miriti" target="_blank"><i class="fa-brands fa-tiktok"></i></a><!--EM <i class="fa-brands fa-ICONE DE REDE SOCIAL"></i> QUE PODE SER LIGADA POR <a href= -->
-                <a href="https://www.instagram.com/jdarteemmiriti/" target="_blank"><i class="fa-brands fa-instagram"></i></a><!-- USE target="_blank" APÓS O LINK PARA ABRIR EM OUTRA PÁGINA-->
-                <a href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.youtube.com/@jd_experiencias_interativas"target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    <p>&copy; JD Arte em Miriti © 2025 <br> CNPJ: 63.330.529/0001-93 <br> Todos os direitos reservados.</p>
+
+    <div class="social-icons">
+
+
+      <a
+        href="https://www.tiktok.com/@jd.arte.em.miriti"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok">
+
+        <i class="fa-brands fa-tiktok"></i>
+
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/jdarteemmiriti/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+
+      </a>
+
+
+      <a
+        href="https://wa.me/5591980706435?text=Ola,%20preciso%20dos%20seus%20servicos%20como%20desenvolvedor,%20me%20chamo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+      </a>
+
+
+      <a
+        href="https://www.youtube.com/@jd_experiencias_interativas"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube">
+
+        <i class="fa-brands fa-youtube"></i>
+
+      </a>
+
+
+    </div>
+
+
+    <p>
+
+      &copy; JD Arte em Miriti © 2025
+
+      <br>
+
+      CNPJ: 63.330.529/0001-93
+
+      <br>
+
+      Todos os direitos reservados.
+
+    </p>
+
   </footer>
 
-    
-                <!-- Ícone Flutuante para abrir o chat -->
-<div id="chat-launcher" style="position:fixed; bottom:20px; right:20px; background:#16213e; color:#fff; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center;  cursor:pointer; z-index:9998;" onclick="toggleChat(true)">
-  <img class="bot" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3k3Y3I3ZzVuNHExZW9xNXU1MnZoM2Jnb2gzcHpwOWwyMGV4MW5uYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E8lwC7e8gMXp4YK8xv/giphy.gif" alt="Quill">
-</div>
 
-<!-- Painel Oculto do JD|Dev Chatbot -->
-<div id="jddev-chat-panel" style="position:fixed; right:0; top:0; height:90vh; width:350px; border-radius: 0 0 5% 5%; background:#1a1a2eea; color:#fff; box-shadow:-2px 0 10px rgba(0, 0, 0, 0.774);  z-index:9999; display:none; flex-direction:column;">
-  <div style="background:#16213e25; padding:1rem; display:flex; align-items:center; justify-content:space-between;">
-    <img class="bot2" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTB4Y2NtNXlmYWJ4NDcyN21qa3ltZmZuMmRhanhwZmk5aHhvZXZtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u91sUMwxrefoF4TQUI/giphy.gif" alt="Quill"><h2 style="margin:0 0; font-size:2rem;">JD</h2>
-    <button onclick="toggleChat(false)" style="background:none; border:none; color:#fff; font-size:1.2rem; cursor:pointer;">✖</button>
+  <!-- =====================================================
+       CHATBOT
+  ===================================================== -->
+
+  <div
+    id="chat-launcher"
+    onclick="toggleChat(true)"
+    role="button"
+    tabindex="0"
+    aria-label="Abrir chat">
+
+    <img
+      class="bot"
+      src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3k3Y3I3ZzVuNHExZW9xNXU1MnZoM2Jnb2gzcHpwOWwyMGV4MW5uYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/E8lwC7e8gMXp4YK8xv/giphy.gif"
+      alt="Quill">
+
   </div>
 
-  <div id="chat-output" style="flex:1; padding:1rem; overflow-y:auto; font-size:1.5rem;"></div>
 
-  <div style="padding:1rem; border-top:1px solid #333;">
-    <input id="chat-input" type="text" placeholder="Digite sua pergunta..." style="width:100%; font-family: Arial, sans-serif; text-transform: none; padding:0.5rem; border:none; border-radius:5px;" onkeydown="if(event.key==='Enter'){sendToDialogflow()}" />
-  </div>
-</div>
+  <!-- =====================================================
+       PAINEL DO CHATBOT
+  ===================================================== -->
 
- <!-- Modal Zoom -->
-  <div id="imgModal" class="modal" onclick="this.classList.remove('active')">
-    <img id="modalImg" src="" alt="">
+  <div
+    id="jddev-chat-panel"
+    role="dialog"
+    aria-label="Chat JD">
+
+
+    <div
+      style="
+        background:#16213e25;
+        padding:1rem;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+      ">
+
+
+      <img
+        class="bot2"
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTB4Y2NtNXlmYWJ4NDcyN21qa3ltZmZuMmRhanhwZmk5aHhvZXZtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u91sUMwxrefoF4TQUI/giphy.gif"
+        alt="Quill">
+
+
+      <h2
+        style="
+          margin:0;
+          font-size:2rem;
+        ">
+
+        JD
+
+      </h2>
+
+
+      <button
+        onclick="toggleChat(false)"
+        style="
+          background:none;
+          border:none;
+          color:#fff;
+          font-size:1.2rem;
+          cursor:pointer;
+        "
+        aria-label="Fechar chat">
+
+        ✖
+
+      </button>
+
+
+    </div>
+
+
+    <div
+      id="chat-output"
+      style="
+        flex:1;
+        padding:1rem;
+        overflow-y:auto;
+        font-size:1.5rem;
+      ">
+    </div>
+
+
+    <div
+      style="
+        padding:1rem;
+        border-top:1px solid #333;
+      ">
+
+
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Digite sua pergunta..."
+        style="
+          width:100%;
+          font-family:Arial,sans-serif;
+          text-transform:none;
+          padding:0.5rem;
+          border:none;
+          border-radius:5px;
+        "
+        onkeydown="if(event.key==='Enter'){sendToDialogflow()}">
+
+
+    </div>
+
+
   </div>
+
+
+  <!-- =====================================================
+       MODAL
+  ===================================================== -->
+
+  <div
+    id="imgModal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Imagem ampliada">
+
+
+    <button
+      id="modalClose"
+      class="modal-close"
+      aria-label="Fechar imagem">
+
+      ✖
+
+    </button>
+
+
+    <img
+      id="modalImg"
+      src=""
+      alt="Imagem ampliada">
+
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
 
   <script>
-    document.querySelectorAll('.scroll-gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        const modal = document.getElementById('imgModal');
-        const modalImg = document.getElementById('modalImg');
-        modalImg.src = img.src;
-        modal.classList.add('active');
-      });
+
+    const modal =
+      document.getElementById("imgModal");
+
+    const modalImg =
+      document.getElementById("modalImg");
+
+    const modalClose =
+      document.getElementById("modalClose");
+
+
+    const galleryImages =
+      document.querySelectorAll(
+        ".scroll-gallery img"
+      );
+
+
+    galleryImages.forEach((img) => {
+
+      img.addEventListener(
+        "click",
+        function (event) {
+
+          event.stopPropagation();
+
+          modalImg.src =
+            this.src;
+
+          modalImg.alt =
+            this.alt;
+
+          modal.classList.add(
+            "active"
+          );
+
+          document.body.style.overflow =
+            "hidden";
+
+        }
+      );
+
     });
+
+
+    function fecharModal() {
+
+      modal.classList.remove(
+        "active"
+      );
+
+      modalImg.src = "";
+
+      document.body.style.overflow =
+        "";
+
+    }
+
+
+    modalClose.addEventListener(
+      "click",
+      function (event) {
+
+        event.stopPropagation();
+
+        fecharModal();
+
+      }
+    );
+
+
+    modal.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+          event.target === modal
+        ) {
+
+          fecharModal();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          fecharModal();
+
+        }
+
+      }
+    );
+
+
+    /* =================================================
+       ACESSIBILIDADE DO CHAT
+    ================================================= */
+
+    document
+      .getElementById("chat-launcher")
+      .addEventListener(
+        "keydown",
+        function (event) {
+
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+
+            event.preventDefault();
+
+            toggleChat(true);
+
+          }
+
+        }
+      );
+
   </script>
 
 
 </body>
+
 </html>
